@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>performance test real-time benchmark</title>
+        <script
+          type="text/javascript"
+          src="https://cdn.bokeh.org/bokeh/release/bokeh-{{ bokeh_version|safe }}.min.js"></script>
+        <style>
+            {
+                box-sizing: border-box;
+            }
+            /* Set additional styling options for the columns*/
+            .column {
+                float: left;
+                width: 50%;
+            }
+
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+        </style>
+    </head>
+    <body>
+    <h1 align="center">ROS 2 real-time benchmarks with static single threaded executor</h1>
+    <h2 align="left">Latency metrics</h2>
+    <div class="row">
+        <div class="column">
+            {{ latency_mean|safe }}
+        </div>
+        <div class="column">
+            {{ latency_max|safe }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            {{ latency_min|safe }}
+        </div>
+        <div class="column">
+            {{ latency_variance|safe }}
+        </div>
+    </div>
+    <h2 align="left">System metrics</h2>
+    <div class="row">
+        <div class="column">
+            {{ minor_page_faults|safe }}
+        </div>
+        <div class="column">
+            {{ major_page_faults|safe }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            {{ cpu_usage|safe }}
+        </div>
+        <div class="column">
+            {{ memory_usage|safe }}
+        </div>
+    </div>
+    <h2 align="left">Publisher loop latency metrics</h2>
+    <div class="row">
+        <div class="column">
+            {{ pub_latency_mean|safe }}
+        </div>
+        <div class="column">
+            {{ pub_latency_max|safe }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            {{ pub_latency_min|safe }}
+        </div>
+        <div class="column">
+            {{ pub_latency_variance|safe }}
+        </div>
+    </div>
+    <h2 align="left">Subscriber loop latency metrics</h2>
+    <div class="row">
+        <div class="column">
+            {{ sub_latency_mean|safe }}
+        </div>
+        <div class="column">
+            {{ sub_latency_max|safe }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            {{ sub_latency_min|safe }}
+        </div>
+        <div class="column">
+            {{ sub_latency_variance|safe }}
+        </div>
+    </div>
+    </body>
+</html>

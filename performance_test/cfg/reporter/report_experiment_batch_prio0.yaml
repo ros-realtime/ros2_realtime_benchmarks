@@ -1,0 +1,375 @@
+---
+datasets:
+  intra_sste_1_subs_prio0:
+    name: Intra SSTE PRIO 0
+    theme:
+      color: '#0000ff'
+    experiments:
+      - com_mean:
+          - rclcpp-static-single-threaded-executor
+        transport:
+          - INTRA
+        msg:
+          - Array1k
+        pubs: 1
+        subs: 1
+        rate: 100
+        reliability: RELIABLE
+        durability: VOLATILE
+        history: KEEP_LAST
+        history_depth: 16
+        rt_prio:
+          - 0
+  intra_ste_1_subs_prio0:
+    name: Intra STE PRIO 0
+    theme:
+      color: '#bf0000'
+    experiments:
+      - com_mean:
+          - rclcpp-single-threaded-executor
+        transport:
+          - INTRA
+        msg:
+          - Array1k
+        pubs: 1
+        subs: 1
+        rate: 100
+        reliability: RELIABLE
+        durability: VOLATILE
+        history: KEEP_LAST
+        history_depth: 16
+        rt_prio:
+          - 0
+  intra_waitset_1_subs_prio0:
+    name: Intra Waiset PRIO 0
+    theme:
+      color: '#00ff00'
+    experiments:
+      - com_mean:
+          - rclcpp-waitset
+        transport:
+          - INTRA
+        msg:
+          - Array1k
+        pubs: 1
+        subs: 1
+        rate: 100
+        reliability: RELIABLE
+        durability: VOLATILE
+        history: KEEP_LAST
+        history_depth: 16
+        rt_prio:
+          - 0
+  udp_sste_1_subs_prio0:
+    name: UDP SSTE PRIO 0
+    theme:
+      color: '#bf0000'
+    experiments:
+      - com_mean:
+          - rclcpp-static-single-threaded-executor
+        transport:
+          - UDP
+        msg:
+          - Array1k
+        pubs: 1
+        subs: 1
+        rate: 100
+        reliability: RELIABLE
+        durability: VOLATILE
+        history: KEEP_LAST
+        history_depth: 16
+        rt_prio:
+          - 0
+  udp_ste_1_subs_prio0:
+    name: UDP STE PRIO 0
+    theme:
+      color: '#0000ff'
+    experiments:
+      - com_mean:
+          - rclcpp-single-threaded-executor
+        transport:
+          - UDP
+        msg:
+          - Array1k
+        pubs: 1
+        subs: 1
+        rate: 100
+        reliability: RELIABLE
+        durability: VOLATILE
+        history: KEEP_LAST
+        history_depth: 16
+        rt_prio:
+          - 0
+  udp_waitset_1_subs_prio0:
+    name: UDP WAISET PRIO 0
+    theme:
+      color: '#00ffff'
+    experiments:
+      - com_mean:
+          - rclcpp-waitset
+        transport:
+          - UDP
+        msg:
+          - Array1k
+        pubs: 1
+        subs: 1
+        rate: 100
+        reliability: RELIABLE
+        durability: VOLATILE
+        history: KEEP_LAST
+        history_depth: 16
+        rt_prio:
+          - 0
+reports:
+  time_vs_latency:
+    report_title: Real-time benchmark report prio 0
+    template_name: ./batch.html
+    figures:
+      - name: intra_latency_mean
+        title: Mean latency over Time
+        x_axis_label: Time (seconds)
+        y_axis_label: Latency (ms)
+        x_range: T_experiment
+        y_range: latency_mean_ms
+        size:
+          width: 900
+          height: 540
+        datasets:
+          - intra_sste_1_subs_prio0
+          - intra_ste_1_subs_prio0
+          - intra_waitset_1_subs_prio0
+      - name: intra_latency_max
+        title: Maximum latency over Time
+        x_axis_label: Time (seconds)
+        y_axis_label: Latency (ms)
+        x_range: T_experiment
+        y_range: latency_max_ms
+        size:
+          width: 900
+          height: 540
+        datasets:
+          - intra_sste_1_subs_prio0
+          - intra_ste_1_subs_prio0
+          - intra_waitset_1_subs_prio0
+      - name: intra_latency_min
+        title: Minimum latency over Time
+        x_axis_label: Time (seconds)
+        y_axis_label: Latency (ms)
+        x_range: T_experiment
+        y_range: latency_min_ms
+        size:
+          width: 900
+          height: 540
+        datasets:
+          - intra_sste_1_subs_prio0
+          - intra_ste_1_subs_prio0
+          - intra_waitset_1_subs_prio0
+      - name: intra_latency_variance
+        title: Latency variance over Time
+        x_axis_label: Time (seconds)
+        y_axis_label: Latency (ms)
+        x_range: T_experiment
+        y_range: latency_variance_ms
+        size:
+          width: 900
+          height: 540
+        datasets:
+          - intra_sste_1_subs_prio0
+          - intra_ste_1_subs_prio0
+          - intra_waitset_1_subs_prio0
+      - name: udp_latency_mean
+        title: Mean latency over Time
+        x_axis_label: Time (seconds)
+        y_axis_label: Latency (ms)
+        x_range: T_experiment
+        y_range: latency_mean_ms
+        size:
+          width: 900
+          height: 540
+        datasets:
+          - udp_sste_1_subs_prio0
+          - udp_ste_1_subs_prio0
+          - udp_waitset_1_subs_prio0
+      - name: udp_latency_max
+        title: Maximum latency over Time
+        x_axis_label: Time (seconds)
+        y_axis_label: Latency (ms)
+        x_range: T_experiment
+        y_range: latency_max_ms
+        size:
+          width: 900
+          height: 540
+        datasets:
+          - udp_sste_1_subs_prio0
+          - udp_ste_1_subs_prio0
+          - udp_waitset_1_subs_prio0
+      - name: udp_latency_min
+        title: Minimum latency over Time
+        x_axis_label: Time (seconds)
+        y_axis_label: Latency (ms)
+        x_range: T_experiment
+        y_range: latency_min_ms
+        size:
+          width: 900
+          height: 540
+        datasets:
+          - udp_sste_1_subs_prio0
+          - udp_ste_1_subs_prio0
+          - udp_waitset_1_subs_prio0
+      - name: udp_latency_variance
+        title: Latency variance over Time
+        x_axis_label: Time (seconds)
+        y_axis_label: Latency (ms)
+        x_range: T_experiment
+        y_range: latency_variance_ms
+        size:
+          width: 900
+          height: 540
+        datasets:
+          - udp_sste_1_subs_prio0
+          - udp_ste_1_subs_prio0
+          - udp_waitset_1_subs_prio0
+      - name: sste_latency_mean
+        title: Mean latency over Time
+        x_axis_label: Time (seconds)
+        y_axis_label: Latency (ms)
+        x_range: T_experiment
+        y_range: latency_mean_ms
+        size:
+          width: 900
+          height: 540
+        datasets:
+          - intra_sste_1_subs_prio0
+          - udp_sste_1_subs_prio0
+      - name: sste_latency_max
+        title: Maximum latency over Time
+        x_axis_label: Time (seconds)
+        y_axis_label: Latency (ms)
+        x_range: T_experiment
+        y_range: latency_max_ms
+        size:
+          width: 900
+          height: 540
+        datasets:
+          - intra_sste_1_subs_prio0
+          - udp_sste_1_subs_prio0
+      - name: sste_latency_min
+        title: Minimum latency over Time
+        x_axis_label: Time (seconds)
+        y_axis_label: Latency (ms)
+        x_range: T_experiment
+        y_range: latency_min_ms
+        size:
+          width: 900
+          height: 540
+        datasets:
+          - intra_sste_1_subs_prio0
+          - udp_sste_1_subs_prio0
+      - name: sste_latency_variance
+        title: Latency variance over Time
+        x_axis_label: Time (seconds)
+        y_axis_label: Latency (ms)
+        x_range: T_experiment
+        y_range: latency_variance_ms
+        size:
+          width: 900
+          height: 540
+        datasets:
+          - intra_sste_1_subs_prio0
+          - udp_sste_1_subs_prio0
+      - name: ste_latency_mean
+        title: Mean latency over Time
+        x_axis_label: Time (seconds)
+        y_axis_label: Latency (ms)
+        x_range: T_experiment
+        y_range: latency_mean_ms
+        size:
+          width: 900
+          height: 540
+        datasets:
+          - intra_ste_1_subs_prio0
+          - udp_ste_1_subs_prio0
+      - name: ste_latency_max
+        title: Maximum latency over Time
+        x_axis_label: Time (seconds)
+        y_axis_label: Latency (ms)
+        x_range: T_experiment
+        y_range: latency_max_ms
+        size:
+          width: 900
+          height: 540
+        datasets:
+          - intra_ste_1_subs_prio0
+          - udp_ste_1_subs_prio0
+      - name: ste_latency_min
+        title: Minimum latency over Time
+        x_axis_label: Time (seconds)
+        y_axis_label: Latency (ms)
+        x_range: T_experiment
+        y_range: latency_min_ms
+        size:
+          width: 900
+          height: 540
+        datasets:
+          - intra_ste_1_subs_prio0
+          - udp_ste_1_subs_prio0
+      - name: ste_latency_variance
+        title: Latency variance over Time
+        x_axis_label: Time (seconds)
+        y_axis_label: Latency (ms)
+        x_range: T_experiment
+        y_range: latency_variance_ms
+        size:
+          width: 900
+          height: 540
+        datasets:
+          - intra_ste_1_subs_prio0
+          - udp_ste_1_subs_prio0
+      - name: waitset_latency_mean
+        title: Mean latency over Time
+        x_axis_label: Time (seconds)
+        y_axis_label: Latency (ms)
+        x_range: T_experiment
+        y_range: latency_mean_ms
+        size:
+          width: 900
+          height: 540
+        datasets:
+          - intra_waitset_1_subs_prio0
+          - udp_waitset_1_subs_prio0
+      - name: waitset_latency_max
+        title: Maximum latency over Time
+        x_axis_label: Time (seconds)
+        y_axis_label: Latency (ms)
+        x_range: T_experiment
+        y_range: latency_max_ms
+        size:
+          width: 900
+          height: 540
+        datasets:
+          - intra_waitset_1_subs_prio0
+          - udp_waitset_1_subs_prio0
+      - name: waitset_latency_min
+        title: Minimum latency over Time
+        x_axis_label: Time (seconds)
+        y_axis_label: Latency (ms)
+        x_range: T_experiment
+        y_range: latency_min_ms
+        size:
+          width: 900
+          height: 540
+        datasets:
+          - intra_waitset_1_subs_prio0
+          - udp_waitset_1_subs_prio0
+      - name: waitset_latency_variance
+        title: Latency variance over Time
+        x_axis_label: Time (seconds)
+        y_axis_label: Latency (ms)
+        x_range: T_experiment
+        y_range: latency_variance_ms
+        size:
+          width: 900
+          height: 540
+        datasets:
+          - intra_waitset_1_subs_prio0
+          - udp_waitset_1_subs_prio0

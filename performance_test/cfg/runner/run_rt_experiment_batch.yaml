@@ -1,0 +1,24 @@
+---
+experiments:
+  -
+    com_mean:
+      - rclcpp-single-threaded-executor
+      - rclcpp-static-single-threaded-executor
+      - rclcpp-waitset
+    transport:
+      - INTRA
+      - UDP
+    msg:
+      - Array1k
+    pubs: 1
+    subs: 1
+    rate: 100
+    reliability: RELIABLE
+    durability: VOLATILE
+    history: KEEP_LAST
+    history_depth: 16
+    rt_prio:
+      - 0
+      - 90
+    max_runtime: 120
+    ignore_seconds: 5

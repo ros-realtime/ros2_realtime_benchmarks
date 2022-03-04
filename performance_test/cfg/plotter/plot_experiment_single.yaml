@@ -1,0 +1,235 @@
+---
+datasets:
+  intra_sste_1_subs_prio0:
+    name: Intra SSTE PRIO 0
+    theme:
+      color: '#bf0000'
+    experiments:
+      - com_mean:
+          - rclcpp-static-single-threaded-executor
+        transport:
+          - INTRA
+        msg:
+          - Array1k
+        pubs: 1
+        subs: 1
+        rate: 100
+        reliability: RELIABLE
+        durability: VOLATILE
+        history: KEEP_LAST
+        history_depth: 16
+        rt_prio:
+          - 0
+  intra_sste_1_subs_prio90:
+    name: Intra SSTE PRIO 90
+    theme:
+      color: '#0000bf'
+    experiments:
+      - com_mean:
+          - rclcpp-static-single-threaded-executor
+        transport:
+          - INTRA
+        msg:
+          - Array1k
+        pubs: 1
+        subs: 1
+        rate: 100
+        reliability: RELIABLE
+        durability: VOLATILE
+        history: KEEP_LAST
+        history_depth: 16
+        rt_prio:
+          - 90
+plots:
+  - name: latency_mean
+    title: Mean latency over Time
+    x_axis_label: Time (seconds)
+    y_axis_label: Latency (ms)
+    x_range: T_experiment
+    y_range: latency_mean_ms
+    size:
+      width: 900
+      height: 540
+    datasets:
+      - intra_sste_1_subs_prio0
+      - intra_sste_1_subs_prio90
+  - name: latency_max
+    title: Maximum latency over Time
+    x_axis_label: Time (seconds)
+    y_axis_label: Latency (ms)
+    x_range: T_experiment
+    y_range: latency_max_ms
+    size:
+      width: 900
+      height: 540
+    datasets:
+      - intra_sste_1_subs_prio0
+      - intra_sste_1_subs_prio90
+  - name: latency_min
+    title: Minimum latency over Time
+    x_axis_label: Time (seconds)
+    y_axis_label: Latency (ms)
+    x_range: T_experiment
+    y_range: latency_min_ms
+    size:
+      width: 900
+      height: 540
+    datasets:
+      - intra_sste_1_subs_prio0
+      - intra_sste_1_subs_prio90
+  - name: latency_variance
+    title: Latency variance over Time
+    x_axis_label: Time (seconds)
+    y_axis_label: Latency (ms)
+    x_range: T_experiment
+    y_range: latency_variance_ms
+    size:
+      width: 900
+      height: 540
+    datasets:
+      - intra_sste_1_subs_prio0
+      - intra_sste_1_subs_prio90
+  - name: minor_page_faults
+    title: Minor page faults
+    x_axis_label: Time (seconds)
+    y_axis_label: Number of minor page faults
+    x_range: T_experiment
+    y_range: sys_tracker_ru_minflt
+    size:
+      width: 900
+      height: 540
+    datasets:
+      - intra_sste_1_subs_prio0
+      - intra_sste_1_subs_prio90
+  - name: major_page_faults
+    title: Major page faults
+    x_axis_label: Time (seconds)
+    y_axis_label: Number of major page faults
+    x_range: T_experiment
+    y_range: sys_tracker_ru_majflt
+    size:
+      width: 900
+      height: 540
+    datasets:
+      - intra_sste_1_subs_prio0
+      - intra_sste_1_subs_prio90
+  - name: cpu_usage
+    title: CPU Usage (%)
+    x_axis_label: Time (seconds)
+    y_axis_label: CPU Usage (%)
+    x_range: T_experiment
+    y_range: cpu_usage_percent
+    size:
+      width: 900
+      height: 540
+    datasets:
+      - intra_sste_1_subs_prio0
+      - intra_sste_1_subs_prio90
+  - name: memory_usage
+    title: Memory Usage (MB)
+    x_axis_label: Time (seconds)
+    y_axis_label: Memory usage (MB)
+    x_range: T_experiment
+    y_range: ru_maxrss
+    size:
+      width: 900
+      height: 540
+    datasets:
+      - intra_sste_1_subs_prio0
+      - intra_sste_1_subs_prio90
+  - name: pub_latency_mean
+    title: Mean latency over Time
+    x_axis_label: Time (seconds)
+    y_axis_label: Latency (ms)
+    x_range: T_experiment
+    y_range: pub_loop_time_reserve_mean_ms
+    size:
+      width: 900
+      height: 540
+    datasets:
+      - intra_sste_1_subs_prio0
+      - intra_sste_1_subs_prio90
+  - name: pub_latency_max
+    title: Maximum latency over Time
+    x_axis_label: Time (seconds)
+    y_axis_label: Latency (ms)
+    x_range: T_experiment
+    y_range: pub_loop_time_reserve_max_ms
+    size:
+      width: 900
+      height: 540
+    datasets:
+      - intra_sste_1_subs_prio0
+      - intra_sste_1_subs_prio90
+  - name: pub_latency_min
+    title: Minimum latency over Time
+    x_axis_label: Time (seconds)
+    y_axis_label: Latency (ms)
+    x_range: T_experiment
+    y_range: pub_loop_time_reserve_min_ms
+    size:
+      width: 900
+      height: 540
+    datasets:
+      - intra_sste_1_subs_prio0
+      - intra_sste_1_subs_prio90
+  - name: pub_latency_variance
+    title: Latency variance over Time
+    x_axis_label: Time (seconds)
+    y_axis_label: Latency (ms)
+    x_range: T_experiment
+    y_range: pub_loop_time_reserve_variance_ms
+    size:
+      width: 900
+      height: 540
+    datasets:
+      - intra_sste_1_subs_prio0
+      - intra_sste_1_subs_prio90
+  - name: sub_latency_mean
+    title: Mean latency over Time
+    x_axis_label: Time (seconds)
+    y_axis_label: Latency (ms)
+    x_range: T_experiment
+    y_range: sub_loop_time_reserve_mean_ms
+    size:
+      width: 900
+      height: 540
+    datasets:
+      - intra_sste_1_subs_prio0
+      - intra_sste_1_subs_prio90
+  - name: sub_latency_max
+    title: Maximum latency over Time
+    x_axis_label: Time (seconds)
+    y_axis_label: Latency (ms)
+    x_range: T_experiment
+    y_range: sub_loop_time_reserve_max_ms
+    size:
+      width: 900
+      height: 540
+    datasets:
+      - intra_sste_1_subs_prio0
+      - intra_sste_1_subs_prio90
+  - name: sub_latency_min
+    title: Minimum latency over Time
+    x_axis_label: Time (seconds)
+    y_axis_label: Latency (ms)
+    x_range: T_experiment
+    y_range: sub_loop_time_reserve_min_ms
+    size:
+      width: 900
+      height: 540
+    datasets:
+      - intra_sste_1_subs_prio0
+      - intra_sste_1_subs_prio90
+  - name: sub_latency_variance
+    title: Latency variance over Time
+    x_axis_label: Time (seconds)
+    y_axis_label: Latency (ms)
+    x_range: T_experiment
+    y_range: sub_loop_time_reserve_variance_ms
+    size:
+      width: 900
+      height: 540
+    datasets:
+      - intra_sste_1_subs_prio0
+      - intra_sste_1_subs_prio900
