@@ -4,7 +4,7 @@
 
 Run the pendulum demo wuth the following settings:
 - update period (-u): 1 millisecond
-- maximum heap prefault size for dynamic memory (-d): 
+- maximum heap prefault size for dynamic memory (-d): 200 MB
 - real-time loop iterations (-i): 60000
 - thread priority (-t): 90
 - sched policy (-s): SCHED_FIFO
