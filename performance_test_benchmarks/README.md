@@ -1,25 +1,59 @@
 # pendulum test real-time benchmarks
 
+## Setup
+
+Clone configuration files repository:
+
+```
+git clone https://github.com/ros-realtime/performance_test_rt_cfg.git
+```
+
 ## How to run the benchmakrs
 
-Run the pendulum demo wuth the following settings:
-- update period (-u): 1 millisecond
-- maximum heap prefault size for dynamic memory (-d): 
-- real-time loop iterations (-i): 60000
-- thread priority (-t): 90
-- sched policy (-s): SCHED_FIFO
-
 ```bash
-pendulum_demo -d 200mb -t 90 -s fifo -u 1ms -i 60000 -f pendulum_demo_results
+# Takes around 4 minutes
+ros2 run performance_report runner \
+  --log-dir perf_logs \
+  --test-name experiments \
+  --configs ~/performance_test_rt_cfg/runner/run_rt_experiment_single.yaml
+
+# Takes around 24 minutes
+ros2 run performance_report runner \
+  --log-dir perf_logs \
+  --test-name experiments \
+  --configs ~/performance_test_rt_cfg/runner/run_rt_experiment_batch.yaml
 ```
 
-See all the options available in the 
-[rttest](https://github.com/ros2/realtime_support/tree/master/rttest) repository.
-
-## How to generate the reports
+# Generate the plots
 
 ```bash
-rttest_plot pendulum_demo_results
+ros2 run performance_report plotter \
+  --log-dir perf_logs \
+  --configs ~/performance_test_rt_cfg/plotter/plot_experiment_single.yaml
+
+ros2 run performance_report plotter \
+  --log-dir perf_logs \
+  --configs ~/performance_test_rt_cfg/plotter/plot_experiment_batch_prio90.yaml
 ```
 
-## How to generate the plots
+```bash
+ros2 run performance_report plotter \
+  --log-dir perf_logs \
+  --configs ~/performance_test_rt_cfg/plotter/plot_experiment_batch_prio0.yaml
+```
+
+## Generate the reports
+
+```bash
+ros2 run performance_report reporter \
+  --log-dir perf_logs \
+  --configs ~/performance_test_rt_cfg/reporter/report_experiment_single.yaml
+
+ros2 run performance_report reporter \
+  --log-dir perf_logs \
+  --configs ~/performance_test_rt_cfg/reporter/report_experiment_batch_prio90.yaml
+
+ros2 run performance_report reporter \
+  --log-dir perf_logs \
+  --configs ~/performance_test_rt_cfg/reporter/report_experiment_batch_prio0.yaml
+```
