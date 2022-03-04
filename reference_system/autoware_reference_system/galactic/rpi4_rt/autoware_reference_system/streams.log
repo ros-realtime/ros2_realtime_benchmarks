@@ -1,0 +1,899 @@
+[0.144s] Invoking command in '/home/ubuntu/reference_system_ws/build/autoware_reference_system': AMENT_PREFIX_PATH=/home/ubuntu/reference_system_ws/install/tracetools_launch:/home/ubuntu/reference_system_ws/install/tracetools_trace:/home/ubuntu/reference_system_ws/install/ros2trace:/home/ubuntu/reference_system_ws/install/tracetools_test:/home/ubuntu/reference_system_ws/install/tracetools_read:/home/ubuntu/reference_system_ws/install/tracetools:/home/ubuntu/reference_system_ws/install/autoware_reference_system:/home/ubuntu/reference_system_ws/install/reference_system:/home/ubuntu/reference_system_ws/install/reference_interfaces:/opt/ros/galactic CMAKE_PREFIX_PATH=/home/ubuntu/reference_system_ws/install/autoware_reference_system:/home/ubuntu/reference_system_ws/install/reference_system:/home/ubuntu/reference_system_ws/install/reference_interfaces:/home/ubuntu/reference_system_ws/install/tracetools_test:/home/ubuntu/reference_system_ws/install/tracetools LD_LIBRARY_PATH=/home/ubuntu/reference_system_ws/install/reference_interfaces/lib:/home/ubuntu/reference_system_ws/install/tracetools/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/lib/aarch64-linux-gnu:/opt/ros/galactic/lib PYTHONPATH=/home/ubuntu/reference_system_ws/install/tracetools_launch/lib/python3.8/site-packages:/home/ubuntu/reference_system_ws/install/tracetools_trace/lib/python3.8/site-packages:/home/ubuntu/reference_system_ws/install/reference_interfaces/lib/python3.8/site-packages:/home/ubuntu/reference_system_ws/install/ros2trace/lib/python3.8/site-packages:/home/ubuntu/reference_system_ws/install/tracetools_test/lib/python3.8/site-packages:/home/ubuntu/reference_system_ws/install/tracetools_read/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages /usr/bin/ctest -C Release -D ExperimentalTest --no-compress-output -V --force-new-ctest-process
+[0.182s] UpdateCTestConfiguration  from :/home/ubuntu/reference_system_ws/build/autoware_reference_system/CTestConfiguration.ini
+[0.183s] Parse Config file:/home/ubuntu/reference_system_ws/build/autoware_reference_system/CTestConfiguration.ini
+[0.184s]    Site: ubuntu
+[0.185s]    Build name: (empty)
+[0.185s]  Add coverage exclude regular expressions.
+[0.186s] SetCTestConfiguration:CMakeCommand:/usr/bin/cmake
+[0.186s] Create new tag: 20220304-1305 - Experimental
+[0.187s] UpdateCTestConfiguration  from :/home/ubuntu/reference_system_ws/build/autoware_reference_system/CTestConfiguration.ini
+[0.187s] Parse Config file:/home/ubuntu/reference_system_ws/build/autoware_reference_system/CTestConfiguration.ini
+[0.188s] Test project /home/ubuntu/reference_system_ws/build/autoware_reference_system
+[0.188s] Constructing a list of tests
+[0.199s] Done constructing a list of tests
+[0.200s] Updating test list for fixtures
+[0.201s] Added 0 tests to meet fixture requirements
+[0.201s] Checking test dependency graph...
+[0.202s] Checking test dependency graph end
+[0.202s] test 1
+[0.203s]       Start  1: autoware_reference_system
+[0.203s] 
+[0.204s] 1: Test command: /usr/bin/python3 "-u" "/opt/ros/galactic/share/ament_cmake_test/cmake/run_test.py" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/autoware_reference_system.xunit.xml" "--package-name" "autoware_reference_system" "--output-file" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/ament_cmake_pytest/autoware_reference_system.txt" "--command" "/usr/bin/python3" "-u" "-m" "pytest" "/home/ubuntu/reference_system_ws/src/reference-system/autoware_reference_system/test/test_platform.py" "-o" "cache_dir=/home/ubuntu/reference_system_ws/build/autoware_reference_system/ament_cmake_pytest/autoware_reference_system/.cache" "--junit-xml=/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/autoware_reference_system.xunit.xml" "--junit-prefix=autoware_reference_system"
+[0.204s] 1: Test timeout computed to be: 5
+[0.480s] 1: -- run_test.py: invoking following command in '/home/ubuntu/reference_system_ws/build/autoware_reference_system':
+[0.481s] 1:  - /usr/bin/python3 -u -m pytest /home/ubuntu/reference_system_ws/src/reference-system/autoware_reference_system/test/test_platform.py -o cache_dir=/home/ubuntu/reference_system_ws/build/autoware_reference_system/ament_cmake_pytest/autoware_reference_system/.cache --junit-xml=/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/autoware_reference_system.xunit.xml --junit-prefix=autoware_reference_system
+[2.078s] 1: ============================= test session starts ==============================
+[2.078s] 1: platform linux -- Python 3.8.10, pytest-4.6.9, py-1.8.1, pluggy-0.13.0
+[2.149s] 1: cachedir: build/autoware_reference_system/ament_cmake_pytest/autoware_reference_system/.cache
+[2.150s] 1: rootdir: /home/ubuntu/reference_system_ws
+[2.150s] 1: plugins: ament-xmllint-0.10.6, ament-lint-0.10.6, launch-testing-ros-0.14.2, ament-pep257-0.10.6, launch-testing-0.17.0, ament-flake8-0.10.6, ament-copyright-0.10.6, cov-2.8.1, colcon-core-0.7.1
+[2.160s] 1: collected 1 item
+[2.164s] 1: 
+[2.175s] 1: ../../src/reference-system/autoware_reference_system/test/test_platform.py . [100%]
+[2.177s] 1: 
+[2.177s] 1: - generated xml file: /home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/autoware_reference_system.xunit.xml -
+[2.178s] 1: =========================== 1 passed in 0.10 seconds ===========================
+[2.346s] 1: -- run_test.py: return code 0
+[2.347s] 1: -- run_test.py: verify result file '/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/autoware_reference_system.xunit.xml'
+[2.394s]  1/36 Test  #1: autoware_reference_system ............................................................   Passed    2.19 sec
+[2.394s] test 2
+[2.395s]       Start  2: test_requirements_autoware_default_singlethreaded.py
+[2.395s] 
+[2.396s] 2: Test command: /usr/bin/python3 "-u" "/opt/ros/galactic/share/ament_cmake_test/cmake/run_test.py" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/test_requirements_autoware_default_singlethreaded.py.xunit.xml" "--package-name" "autoware_reference_system" "--output-file" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/ros_test/test_requirements_autoware_default_singlethreaded.py.txt" "--command" "ros2" "test" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_requirements_autoware_default_singlethreaded.py" "--junit-xml=/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/test_requirements_autoware_default_singlethreaded.py.xunit.xml" "--package-name=autoware_reference_system"
+[2.396s] 2: Test timeout computed to be: 300
+[2.677s] 2: -- run_test.py: invoking following command in '/home/ubuntu/reference_system_ws/build/autoware_reference_system':
+[2.678s] 2:  - ros2 test /home/ubuntu/reference_system_ws/build/autoware_reference_system/test_requirements_autoware_default_singlethreaded.py --junit-xml=/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/test_requirements_autoware_default_singlethreaded.py.xunit.xml --package-name=autoware_reference_system
+[5.185s] 2: Running with ROS_DOMAIN_ID 1
+[5.185s] 2: ROS_DOMAIN_ID 1
+[5.186s] 2: [INFO] [launch]: All log files can be found below /root/.ros/log/2022-03-04-14-05-59-140041-ubuntu-20195
+[5.187s] 2: [INFO] [launch]: Default logging verbosity is set to INFO
+[5.223s] 2: test_pubs_and_subs (autoware_reference_system.TestRequirementsAutowareReferenceSystem) ... [INFO] [test_requirements_autoware_default_singlethreaded-1]: process started with pid [20209]
+[5.597s] 2: [test_requirements_autoware_default_singlethreaded-1] [INFO] [rclcpp]: Currently used middleware can't loan messages. Local allocator will be used.
+[5.980s] 2: topic_monitor looping:
+[5.981s] 2: Topic monitor data collected
+[5.982s] 2: 		/FrontLidarDriver: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[5.982s] 2: 		/RearLidarDriver: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[5.983s] 2: 		/PointCloudMap: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[5.983s] 2: 		/Visualizer: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[5.984s] 2: 		/Lanelet2Map: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[5.984s] 2: 		/PointsTransformerFront: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[5.986s] 2: 		/PointsTransformerRear: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[5.986s] 2: 		/VoxelGridDownsampler: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[5.989s] 2: 		/PointCloudMapLoader: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[5.989s] 2: 		/EuclideanClusterDetector: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[5.991s] 2: 		/ObjectCollisionEstimator: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[5.991s] 2: 		/MPCController: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[5.992s] 2: 		/ParkingPlanner: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[5.993s] 2: 		/LanePlanner: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[5.993s] 2: 		/PointCloudFusion: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[5.993s] 2: 		/NDTLocalizer: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[5.994s] 2: 		/VehicleInterface: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[5.994s] 2: 		/Lanelet2GlobalPlanner: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[5.995s] 2: 		/Lanelet2MapLoader: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[5.995s] 2: 		/BehaviorPlanner: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[5.996s] 2: [INFO] [test_requirements_autoware_default_singlethreaded-1]: sending signal 'SIGINT' to process[test_requirements_autoware_default_singlethreaded-1]
+[5.997s] 2: [test_requirements_autoware_default_singlethreaded-1] [INFO] [rclcpp]: signal_handler(signal_value=2)
+[6.781s] 2: [INFO] [test_requirements_autoware_default_singlethreaded-1]: process has finished cleanly [pid 20209]
+[6.787s] 2: ok
+[6.788s] 2: 
+[6.790s] 2: ----------------------------------------------------------------------
+[6.791s] 2: Ran 1 test in 0.782s
+[6.792s] 2: 
+[6.793s] 2: OK
+[6.795s] 2: 
+[6.796s] 2: ----------------------------------------------------------------------
+[6.797s] 2: Ran 0 tests in 0.000s
+[6.798s] 2: 
+[6.799s] 2: OK
+[7.018s] 2: -- run_test.py: return code 0
+[7.019s] 2: -- run_test.py: verify result file '/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/test_requirements_autoware_default_singlethreaded.py.xunit.xml'
+[7.066s]  2/36 Test  #2: test_requirements_autoware_default_singlethreaded.py .................................   Passed    4.67 sec
+[7.066s] test 3
+[7.067s]       Start  3: test_requirements_autoware_default_staticsinglethreaded.py
+[7.068s] 
+[7.068s] 3: Test command: /usr/bin/python3 "-u" "/opt/ros/galactic/share/ament_cmake_test/cmake/run_test.py" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/test_requirements_autoware_default_staticsinglethreaded.py.xunit.xml" "--package-name" "autoware_reference_system" "--output-file" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/ros_test/test_requirements_autoware_default_staticsinglethreaded.py.txt" "--command" "ros2" "test" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_requirements_autoware_default_staticsinglethreaded.py" "--junit-xml=/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/test_requirements_autoware_default_staticsinglethreaded.py.xunit.xml" "--package-name=autoware_reference_system"
+[7.069s] 3: Test timeout computed to be: 300
+[7.356s] 3: -- run_test.py: invoking following command in '/home/ubuntu/reference_system_ws/build/autoware_reference_system':
+[7.357s] 3:  - ros2 test /home/ubuntu/reference_system_ws/build/autoware_reference_system/test_requirements_autoware_default_staticsinglethreaded.py --junit-xml=/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/test_requirements_autoware_default_staticsinglethreaded.py.xunit.xml --package-name=autoware_reference_system
+[9.928s] 3: Running with ROS_DOMAIN_ID 1
+[9.929s] 3: ROS_DOMAIN_ID 1
+[9.929s] 3: [INFO] [launch]: All log files can be found below /root/.ros/log/2022-03-04-14-06-03-883242-ubuntu-20223
+[9.930s] 3: [INFO] [launch]: Default logging verbosity is set to INFO
+[9.961s] 3: test_pubs_and_subs (autoware_reference_system.TestRequirementsAutowareReferenceSystem) ... [INFO] [test_requirements_autoware_default_staticsinglethreaded-1]: process started with pid [20236]
+[10.338s] 3: [test_requirements_autoware_default_staticsinglethreaded-1] [INFO] [rclcpp]: Currently used middleware can't loan messages. Local allocator will be used.
+[10.721s] 3: topic_monitor looping:
+[10.721s] 3: Topic monitor data collected
+[10.722s] 3: 		/FrontLidarDriver: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[10.726s] 3: 		/RearLidarDriver: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[10.727s] 3: 		/PointCloudMap: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[10.727s] 3: 		/Visualizer: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[10.728s] 3: 		/Lanelet2Map: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[10.729s] 3: 		/PointsTransformerFront: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[10.730s] 3: 		/PointsTransformerRear: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[10.731s] 3: 		/VoxelGridDownsampler: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[10.732s] 3: 		/PointCloudMapLoader: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[10.733s] 3: 		/EuclideanClusterDetector: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[10.733s] 3: 		/ObjectCollisionEstimator: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[10.734s] 3: 		/MPCController: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[10.735s] 3: 		/ParkingPlanner: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[10.736s] 3: 		/LanePlanner: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[10.737s] 3: 		/PointCloudFusion: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[10.738s] 3: 		/NDTLocalizer: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[10.738s] 3: 		/VehicleInterface: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[10.738s] 3: 		/Lanelet2GlobalPlanner: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[10.739s] 3: 		/Lanelet2MapLoader: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[10.739s] 3: 		/BehaviorPlanner: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[10.740s] 3: [INFO] [test_requirements_autoware_default_staticsinglethreaded-1]: sending signal 'SIGINT' to process[test_requirements_autoware_default_staticsinglethreaded-1]
+[10.740s] 3: [test_requirements_autoware_default_staticsinglethreaded-1] [INFO] [rclcpp]: signal_handler(signal_value=2)
+[14.730s] 3: [INFO] [test_requirements_autoware_default_staticsinglethreaded-1]: process has finished cleanly [pid 20236]
+[14.734s] 3: ok
+[14.736s] 3: 
+[14.737s] 3: ----------------------------------------------------------------------
+[14.738s] 3: Ran 1 test in 0.782s
+[14.739s] 3: 
+[14.741s] 3: OK
+[14.742s] 3: 
+[14.743s] 3: ----------------------------------------------------------------------
+[14.744s] 3: Ran 0 tests in 0.000s
+[14.745s] 3: 
+[14.747s] 3: OK
+[14.968s] 3: -- run_test.py: return code 0
+[14.969s] 3: -- run_test.py: verify result file '/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/test_requirements_autoware_default_staticsinglethreaded.py.xunit.xml'
+[15.014s]  3/36 Test  #3: test_requirements_autoware_default_staticsinglethreaded.py ...........................   Passed    7.95 sec
+[15.015s] test 4
+[15.015s]       Start  4: test_requirements_autoware_default_multithreaded.py
+[15.016s] 
+[15.016s] 4: Test command: /usr/bin/python3 "-u" "/opt/ros/galactic/share/ament_cmake_test/cmake/run_test.py" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/test_requirements_autoware_default_multithreaded.py.xunit.xml" "--package-name" "autoware_reference_system" "--output-file" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/ros_test/test_requirements_autoware_default_multithreaded.py.txt" "--command" "ros2" "test" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_requirements_autoware_default_multithreaded.py" "--junit-xml=/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/test_requirements_autoware_default_multithreaded.py.xunit.xml" "--package-name=autoware_reference_system"
+[15.017s] 4: Test timeout computed to be: 300
+[15.298s] 4: -- run_test.py: invoking following command in '/home/ubuntu/reference_system_ws/build/autoware_reference_system':
+[15.298s] 4:  - ros2 test /home/ubuntu/reference_system_ws/build/autoware_reference_system/test_requirements_autoware_default_multithreaded.py --junit-xml=/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/test_requirements_autoware_default_multithreaded.py.xunit.xml --package-name=autoware_reference_system
+[17.827s] 4: Running with ROS_DOMAIN_ID 1
+[17.827s] 4: ROS_DOMAIN_ID 1
+[17.828s] 4: [INFO] [launch]: All log files can be found below /root/.ros/log/2022-03-04-14-06-11-782084-ubuntu-20267
+[17.829s] 4: [INFO] [launch]: Default logging verbosity is set to INFO
+[17.858s] 4: test_pubs_and_subs (autoware_reference_system.TestRequirementsAutowareReferenceSystem) ... [INFO] [test_requirements_autoware_default_multithreaded-1]: process started with pid [20282]
+[18.233s] 4: [test_requirements_autoware_default_multithreaded-1] [INFO] [rclcpp]: Currently used middleware can't loan messages. Local allocator will be used.
+[18.615s] 4: topic_monitor looping:
+[18.616s] 4: Topic monitor data collected
+[18.617s] 4: 		/FrontLidarDriver: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[18.618s] 4: 		/RearLidarDriver: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[18.619s] 4: 		/PointCloudMap: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[18.619s] 4: 		/Visualizer: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[18.620s] 4: 		/Lanelet2Map: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[18.620s] 4: 		/PointsTransformerFront: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[18.620s] 4: 		/PointsTransformerRear: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[18.621s] 4: 		/VoxelGridDownsampler: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[18.621s] 4: 		/PointCloudMapLoader: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[18.622s] 4: 		/EuclideanClusterDetector: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[18.622s] 4: 		/ObjectCollisionEstimator: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[18.622s] 4: 		/MPCController: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[18.623s] 4: 		/ParkingPlanner: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[18.623s] 4: 		/LanePlanner: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[18.623s] 4: 		/PointCloudFusion: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[18.624s] 4: 		/NDTLocalizer: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[18.624s] 4: 		/VehicleInterface: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[18.626s] 4: 		/Lanelet2GlobalPlanner: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[18.626s] 4: 		/Lanelet2MapLoader: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[18.626s] 4: 		/BehaviorPlanner: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[18.628s] 4: [INFO] [test_requirements_autoware_default_multithreaded-1]: sending signal 'SIGINT' to process[test_requirements_autoware_default_multithreaded-1]
+[18.628s] 4: [test_requirements_autoware_default_multithreaded-1] [INFO] [rclcpp]: signal_handler(signal_value=2)
+[20.128s] 4: [INFO] [test_requirements_autoware_default_multithreaded-1]: process has finished cleanly [pid 20282]
+[20.133s] 4: ok
+[20.134s] 4: 
+[20.135s] 4: ----------------------------------------------------------------------
+[20.136s] 4: Ran 1 test in 0.778s
+[20.137s] 4: 
+[20.138s] 4: OK
+[20.140s] 4: 
+[20.141s] 4: ----------------------------------------------------------------------
+[20.142s] 4: Ran 0 tests in 0.000s
+[20.143s] 4: 
+[20.144s] 4: OK
+[20.366s] 4: -- run_test.py: return code 0
+[20.367s] 4: -- run_test.py: verify result file '/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/test_requirements_autoware_default_multithreaded.py.xunit.xml'
+[20.412s]  4/36 Test  #4: test_requirements_autoware_default_multithreaded.py ..................................   Passed    5.40 sec
+[20.413s] test 5
+[20.413s]       Start  5: test_requirements_autoware_default_prioritized.py
+[20.414s] 
+[20.414s] 5: Test command: /usr/bin/python3 "-u" "/opt/ros/galactic/share/ament_cmake_test/cmake/run_test.py" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/test_requirements_autoware_default_prioritized.py.xunit.xml" "--package-name" "autoware_reference_system" "--output-file" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/ros_test/test_requirements_autoware_default_prioritized.py.txt" "--command" "ros2" "test" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_requirements_autoware_default_prioritized.py" "--junit-xml=/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/test_requirements_autoware_default_prioritized.py.xunit.xml" "--package-name=autoware_reference_system"
+[20.415s] 5: Test timeout computed to be: 300
+[20.696s] 5: -- run_test.py: invoking following command in '/home/ubuntu/reference_system_ws/build/autoware_reference_system':
+[20.697s] 5:  - ros2 test /home/ubuntu/reference_system_ws/build/autoware_reference_system/test_requirements_autoware_default_prioritized.py --junit-xml=/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/test_requirements_autoware_default_prioritized.py.xunit.xml --package-name=autoware_reference_system
+[23.265s] 5: Running with ROS_DOMAIN_ID 1
+[23.266s] 5: ROS_DOMAIN_ID 1
+[23.267s] 5: [INFO] [launch]: All log files can be found below /root/.ros/log/2022-03-04-14-06-17-220355-ubuntu-20309
+[23.267s] 5: [INFO] [launch]: Default logging verbosity is set to INFO
+[23.295s] 5: test_pubs_and_subs (autoware_reference_system.TestRequirementsAutowareReferenceSystem) ... [INFO] [test_requirements_autoware_default_prioritized-1]: process started with pid [20324]
+[23.717s] 5: [test_requirements_autoware_default_prioritized-1] [INFO] [rclcpp]: Currently used middleware can't loan messages. Local allocator will be used.
+[24.055s] 5: topic_monitor looping:
+[24.057s] 5: Topic monitor data collected
+[24.057s] 5: 		/FrontLidarDriver: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[24.058s] 5: 		/RearLidarDriver: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[24.058s] 5: 		/PointCloudMap: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[24.059s] 5: 		/Visualizer: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[24.059s] 5: 		/Lanelet2Map: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[24.059s] 5: 		/PointsTransformerFront: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[24.060s] 5: 		/PointsTransformerRear: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[24.061s] 5: 		/VoxelGridDownsampler: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[24.061s] 5: 		/PointCloudMapLoader: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[24.061s] 5: 		/EuclideanClusterDetector: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[24.063s] 5: 		/ObjectCollisionEstimator: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[24.063s] 5: 		/MPCController: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[24.065s] 5: 		/ParkingPlanner: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[24.065s] 5: 		/LanePlanner: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[24.066s] 5: 		/PointCloudFusion: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[24.066s] 5: 		/NDTLocalizer: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[24.067s] 5: 		/VehicleInterface: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[24.067s] 5: 		/Lanelet2GlobalPlanner: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[24.070s] 5: 		/Lanelet2MapLoader: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[24.070s] 5: 		/BehaviorPlanner: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[24.070s] 5: [INFO] [test_requirements_autoware_default_prioritized-1]: sending signal 'SIGINT' to process[test_requirements_autoware_default_prioritized-1]
+[24.072s] 5: [test_requirements_autoware_default_prioritized-1] [INFO] [rclcpp]: signal_handler(signal_value=2)
+[25.546s] 5: [INFO] [test_requirements_autoware_default_prioritized-1]: process has finished cleanly [pid 20324]
+[25.550s] 5: ok
+[25.552s] 5: 
+[25.553s] 5: ----------------------------------------------------------------------
+[25.555s] 5: Ran 1 test in 0.778s
+[25.556s] 5: 
+[25.557s] 5: OK
+[25.558s] 5: 
+[25.559s] 5: ----------------------------------------------------------------------
+[25.561s] 5: Ran 0 tests in 0.000s
+[25.562s] 5: 
+[25.563s] 5: OK
+[25.786s] 5: -- run_test.py: return code 0
+[25.786s] 5: -- run_test.py: verify result file '/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/test_requirements_autoware_default_prioritized.py.xunit.xml'
+[25.833s]  5/36 Test  #5: test_requirements_autoware_default_prioritized.py ....................................   Passed    5.42 sec
+[25.834s] test 6
+[25.834s]       Start  6: test_requirements_autoware_default_cbg.py
+[25.835s] 
+[25.836s] 6: Test command: /usr/bin/python3 "-u" "/opt/ros/galactic/share/ament_cmake_test/cmake/run_test.py" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/test_requirements_autoware_default_cbg.py.xunit.xml" "--package-name" "autoware_reference_system" "--output-file" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/ros_test/test_requirements_autoware_default_cbg.py.txt" "--command" "ros2" "test" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_requirements_autoware_default_cbg.py" "--junit-xml=/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/test_requirements_autoware_default_cbg.py.xunit.xml" "--package-name=autoware_reference_system"
+[25.836s] 6: Test timeout computed to be: 300
+[26.118s] 6: -- run_test.py: invoking following command in '/home/ubuntu/reference_system_ws/build/autoware_reference_system':
+[26.119s] 6:  - ros2 test /home/ubuntu/reference_system_ws/build/autoware_reference_system/test_requirements_autoware_default_cbg.py --junit-xml=/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/test_requirements_autoware_default_cbg.py.xunit.xml --package-name=autoware_reference_system
+[28.412s] 6: Running with ROS_DOMAIN_ID 1
+[28.412s] 6: ROS_DOMAIN_ID 1
+[28.413s] 6: [INFO] [launch]: All log files can be found below /root/.ros/log/2022-03-04-14-06-22-367773-ubuntu-20347
+[28.413s] 6: [INFO] [launch]: Default logging verbosity is set to INFO
+[28.438s] 6: test_pubs_and_subs (autoware_reference_system.TestRequirementsAutowareReferenceSystem) ... [INFO] [test_requirements_autoware_default_cbg-1]: process started with pid [20361]
+[28.742s] 6: [test_requirements_autoware_default_cbg-1] [INFO] [rclcpp]: Currently used middleware can't loan messages. Local allocator will be used.
+[29.199s] 6: topic_monitor looping:
+[29.202s] 6: Topic monitor data collected
+[29.202s] 6: 		/FrontLidarDriver: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[29.204s] 6: 		/RearLidarDriver: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[29.204s] 6: 		/PointCloudMap: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[29.206s] 6: 		/Visualizer: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[29.206s] 6: 		/Lanelet2Map: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[29.208s] 6: 		/PointsTransformerFront: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[29.209s] 6: 		/PointsTransformerRear: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[29.209s] 6: 		/VoxelGridDownsampler: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[29.210s] 6: 		/PointCloudMapLoader: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[29.211s] 6: 		/EuclideanClusterDetector: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[29.211s] 6: 		/ObjectCollisionEstimator: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[29.212s] 6: 		/MPCController: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[29.212s] 6: 		/ParkingPlanner: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[29.213s] 6: 		/LanePlanner: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[29.213s] 6: 		/PointCloudFusion: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[29.213s] 6: 		/NDTLocalizer: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[29.214s] 6: 		/VehicleInterface: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[29.214s] 6: 		/Lanelet2GlobalPlanner: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[29.215s] 6: 		/Lanelet2MapLoader: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[29.215s] 6: 		/BehaviorPlanner: ['topic_exists'=True, 'pubs_match'=True, 'subs_match'=True]
+[29.215s] 6: [INFO] [test_requirements_autoware_default_cbg-1]: sending signal 'SIGINT' to process[test_requirements_autoware_default_cbg-1]
+[29.217s] 6: [test_requirements_autoware_default_cbg-1] [INFO] [rclcpp]: signal_handler(signal_value=2)
+[29.890s] 6: [INFO] [test_requirements_autoware_default_cbg-1]: process has finished cleanly [pid 20361]
+[29.894s] 6: ok
+[29.896s] 6: 
+[29.897s] 6: ----------------------------------------------------------------------
+[29.899s] 6: Ran 1 test in 0.779s
+[29.900s] 6: 
+[29.901s] 6: OK
+[29.902s] 6: 
+[29.903s] 6: ----------------------------------------------------------------------
+[29.904s] 6: Ran 0 tests in 0.000s
+[29.905s] 6: 
+[29.906s] 6: OK
+[30.102s] 6: -- run_test.py: return code 0
+[30.103s] 6: -- run_test.py: verify result file '/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/test_requirements_autoware_default_cbg.py.xunit.xml'
+[30.143s]  6/36 Test  #6: test_requirements_autoware_default_cbg.py ............................................   Passed    4.31 sec
+[30.144s] test 7
+[30.144s]       Start  7: generate_memory_trace_autoware_default_singlethreaded_rmw_cyclonedds_cpp_5s
+[30.144s] 
+[30.145s] 7: Test command: /usr/bin/bash "-c" "chmod u+x /home/ubuntu/reference_system_ws/install/autoware_reference_system/share/autoware_reference_system/scripts/benchmark_one.sh;
+[30.145s]             RMW_IMPLEMENTATION=rmw_cyclonedds_cpp             /home/ubuntu/reference_system_ws/install/autoware_reference_system/share/autoware_reference_system/scripts/benchmark_one.sh             $(ros2 pkg prefix autoware_reference_system)/lib/autoware_reference_system/autoware_default_singlethreaded             5             /root/.ros/memory             autoware_default_singlethreaded_rmw_cyclonedds_cpp_5s.txt"
+[30.145s] 7: Test timeout computed to be: 300
+[31.807s] 7: Benchmarking: /home/ubuntu/reference_system_ws/install/autoware_reference_system/lib/autoware_reference_system/autoware_default_singlethreaded
+[31.808s] 7: Duration: 5
+[31.808s] 7: writing logs to: /root/.ros/memory/autoware_default_singlethreaded_rmw_cyclonedds_cpp_5s.txt
+[32.240s] 7: [INFO] [1646399186.203738932] [rclcpp]: Currently used middleware can't loan messages. Local allocator will be used.
+[38.459s] 7: Starting up command '/home/ubuntu/reference_system_ws/install/autoware_reference_system/lib/autoware_reference_system/autoware_default_singlethreaded' and attaching to process
+[38.670s]  7/36 Test  #7: generate_memory_trace_autoware_default_singlethreaded_rmw_cyclonedds_cpp_5s ..........   Passed    8.52 sec
+[38.670s] test 8
+[38.671s]       Start  8: generate_memory_report_autoware_default_singlethreaded_rmw_cyclonedds_cpp_5s
+[38.671s] 
+[38.672s] 8: Test command: /usr/bin/bash "-c" "python3 /home/ubuntu/reference_system_ws/install/autoware_reference_system/share/autoware_reference_system/test/generate_reports.py /root/.ros/memory/autoware_default_singlethreaded_rmw_cyclonedds_cpp_5s.txt" "COMMENT" "Generate CPU and Memory Usage report from psrecord data"
+[38.672s] 8: Test timeout computed to be: 300
+[41.856s] 8: Output report to /root/.ros/memory/autoware_default_singlethreaded_rmw_cyclonedds_cpp_5s_memory_and_cpu_usage_report.html
+[42.266s]  8/36 Test  #8: generate_memory_report_autoware_default_singlethreaded_rmw_cyclonedds_cpp_5s .........   Passed    3.60 sec
+[42.266s] test 9
+[42.267s]       Start  9: generate_std_traces_autoware_default_singlethreaded_rmw_cyclonedds_cpp_5s.py
+[42.267s] 
+[42.268s] 9: Test command: /usr/bin/python3 "-u" "/opt/ros/galactic/share/ament_cmake_test/cmake/run_test.py" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/generate_std_traces_autoware_default_singlethreaded_rmw_cyclonedds_cpp_5s.py.xunit.xml" "--package-name" "autoware_reference_system" "--output-file" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/ros_test/generate_std_traces_autoware_default_singlethreaded_rmw_cyclonedds_cpp_5s.py.txt" "--command" "ros2" "test" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/generate_std_traces_autoware_default_singlethreaded_rmw_cyclonedds_cpp_5s.py" "--junit-xml=/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/generate_std_traces_autoware_default_singlethreaded_rmw_cyclonedds_cpp_5s.py.xunit.xml" "--package-name=autoware_reference_system"
+[42.268s] 9: Test timeout computed to be: 10
+[42.516s] 9: -- run_test.py: invoking following command in '/home/ubuntu/reference_system_ws/build/autoware_reference_system':
+[42.516s] 9:  - ros2 test /home/ubuntu/reference_system_ws/build/autoware_reference_system/generate_std_traces_autoware_default_singlethreaded_rmw_cyclonedds_cpp_5s.py --junit-xml=/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/generate_std_traces_autoware_default_singlethreaded_rmw_cyclonedds_cpp_5s.py.xunit.xml --package-name=autoware_reference_system
+[44.475s] 9: Running with ROS_DOMAIN_ID 1
+[44.475s] 9: ROS_DOMAIN_ID 1
+[44.476s] 9: [INFO] [launch]: All log files can be found below /root/.ros/log/2022-03-04-14-06-38-257761-ubuntu-20402
+[44.476s] 9: [INFO] [launch]: Default logging verbosity is set to INFO
+[44.489s] 9: test_generate_traces (autoware_reference_system.TestGenerateTracesAutowareReferenceSystem) ... generating traces...
+[44.489s] 9: [INFO] [autoware_default_singlethreaded-1]: process started with pid [20407]
+[44.716s] 9: [autoware_default_singlethreaded-1] [INFO] [rclcpp]: Currently used middleware can't loan messages. Local allocator will be used.
+[49.497s] 9: generating traces...
+[49.497s] 9: generating traces...
+[49.498s] 9: generating traces...
+[49.498s] 9: generating traces...
+[49.499s] 9: generating traces...
+[49.499s] 9: generating traces...
+[49.500s] 9: generating traces...
+[49.500s] 9: generating traces...
+[49.500s] 9: generating traces...
+[49.501s] 9: generating traces...
+[49.501s] 9: generating traces...
+[49.502s] 9: generating traces...
+[49.502s] 9: generating traces...
+[49.503s] 9: generating traces...
+[49.503s] 9: generating traces...
+[49.504s] 9: generating traces...
+[49.504s] 9: generating traces...
+[49.504s] 9: generating traces...
+[49.505s] 9: generating traces...
+[49.505s] 9: [INFO] [autoware_default_singlethreaded-1]: sending signal 'SIGINT' to process[autoware_default_singlethreaded-1]
+[49.505s] 9: [autoware_default_singlethreaded-1] [INFO] [rclcpp]: signal_handler(signal_value=2)
+[50.047s] 9: [INFO] [autoware_default_singlethreaded-1]: process has finished cleanly [pid 20407]
+[50.051s] 9: ok
+[50.052s] 9: 
+[50.052s] 9: ----------------------------------------------------------------------
+[50.053s] 9: Ran 1 test in 5.007s
+[50.054s] 9: 
+[50.054s] 9: OK
+[50.055s] 9: 
+[50.056s] 9: ----------------------------------------------------------------------
+[50.057s] 9: Ran 0 tests in 0.000s
+[50.058s] 9: 
+[50.059s] 9: OK
+[50.206s] 9: -- run_test.py: return code 0
+[50.207s] 9: -- run_test.py: verify result file '/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/generate_std_traces_autoware_default_singlethreaded_rmw_cyclonedds_cpp_5s.py.xunit.xml'
+[50.247s]  9/36 Test  #9: generate_std_traces_autoware_default_singlethreaded_rmw_cyclonedds_cpp_5s.py .........   Passed    7.98 sec
+[50.248s] test 10
+[50.248s]       Start 10: generate_std_report_autoware_default_singlethreaded_rmw_cyclonedds_cpp_5s
+[50.249s] 
+[50.249s] 10: Test command: /usr/bin/bash "-c" "python3 /home/ubuntu/reference_system_ws/install/autoware_reference_system/share/autoware_reference_system/test/generate_reports.py /home/ubuntu/reference_system_ws/install/autoware_reference_system/../../log/latest_test/autoware_reference_system" "COMMENT" "Generate Latency and Dropped Message reports from the std print log files"
+[50.250s] 10: Test timeout computed to be: 10000000
+[52.949s] 10: std report called
+[53.356s] 10/36 Test #10: generate_std_report_autoware_default_singlethreaded_rmw_cyclonedds_cpp_5s ............   Passed    3.11 sec
+[53.356s] test 11
+[53.357s]       Start 11: generate_memory_trace_autoware_default_staticsinglethreaded_rmw_cyclonedds_cpp_5s
+[53.357s] 
+[53.357s] 11: Test command: /usr/bin/bash "-c" "chmod u+x /home/ubuntu/reference_system_ws/install/autoware_reference_system/share/autoware_reference_system/scripts/benchmark_one.sh;
+[53.358s]             RMW_IMPLEMENTATION=rmw_cyclonedds_cpp             /home/ubuntu/reference_system_ws/install/autoware_reference_system/share/autoware_reference_system/scripts/benchmark_one.sh             $(ros2 pkg prefix autoware_reference_system)/lib/autoware_reference_system/autoware_default_staticsinglethreaded             5             /root/.ros/memory             autoware_default_staticsinglethreaded_rmw_cyclonedds_cpp_5s.txt"
+[53.358s] 11: Test timeout computed to be: 300
+[55.020s] 11: Benchmarking: /home/ubuntu/reference_system_ws/install/autoware_reference_system/lib/autoware_reference_system/autoware_default_staticsinglethreaded
+[55.020s] 11: Duration: 5
+[55.021s] 11: writing logs to: /root/.ros/memory/autoware_default_staticsinglethreaded_rmw_cyclonedds_cpp_5s.txt
+[55.453s] 11: [INFO] [1646399209.416755881] [rclcpp]: Currently used middleware can't loan messages. Local allocator will be used.
+[61.684s] 11: Starting up command '/home/ubuntu/reference_system_ws/install/autoware_reference_system/lib/autoware_reference_system/autoware_default_staticsinglethreaded' and attaching to process
+[61.894s] 11/36 Test #11: generate_memory_trace_autoware_default_staticsinglethreaded_rmw_cyclonedds_cpp_5s ....   Passed    8.54 sec
+[61.895s] test 12
+[61.895s]       Start 12: generate_memory_report_autoware_default_staticsinglethreaded_rmw_cyclonedds_cpp_5s
+[61.895s] 
+[61.896s] 12: Test command: /usr/bin/bash "-c" "python3 /home/ubuntu/reference_system_ws/install/autoware_reference_system/share/autoware_reference_system/test/generate_reports.py /root/.ros/memory/autoware_default_staticsinglethreaded_rmw_cyclonedds_cpp_5s.txt" "COMMENT" "Generate CPU and Memory Usage report from psrecord data"
+[61.896s] 12: Test timeout computed to be: 300
+[65.081s] 12: Output report to /root/.ros/memory/autoware_default_staticsinglethreaded_rmw_cyclonedds_cpp_5s_memory_and_cpu_usage_report.html
+[65.490s] 12/36 Test #12: generate_memory_report_autoware_default_staticsinglethreaded_rmw_cyclonedds_cpp_5s ...   Passed    3.59 sec
+[65.490s] test 13
+[65.491s]       Start 13: generate_std_traces_autoware_default_staticsinglethreaded_rmw_cyclonedds_cpp_5s.py
+[65.491s] 
+[65.492s] 13: Test command: /usr/bin/python3 "-u" "/opt/ros/galactic/share/ament_cmake_test/cmake/run_test.py" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/generate_std_traces_autoware_default_staticsinglethreaded_rmw_cyclonedds_cpp_5s.py.xunit.xml" "--package-name" "autoware_reference_system" "--output-file" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/ros_test/generate_std_traces_autoware_default_staticsinglethreaded_rmw_cyclonedds_cpp_5s.py.txt" "--command" "ros2" "test" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/generate_std_traces_autoware_default_staticsinglethreaded_rmw_cyclonedds_cpp_5s.py" "--junit-xml=/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/generate_std_traces_autoware_default_staticsinglethreaded_rmw_cyclonedds_cpp_5s.py.xunit.xml" "--package-name=autoware_reference_system"
+[65.492s] 13: Test timeout computed to be: 10
+[65.742s] 13: -- run_test.py: invoking following command in '/home/ubuntu/reference_system_ws/build/autoware_reference_system':
+[65.743s] 13:  - ros2 test /home/ubuntu/reference_system_ws/build/autoware_reference_system/generate_std_traces_autoware_default_staticsinglethreaded_rmw_cyclonedds_cpp_5s.py --junit-xml=/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/generate_std_traces_autoware_default_staticsinglethreaded_rmw_cyclonedds_cpp_5s.py.xunit.xml --package-name=autoware_reference_system
+[67.708s] 13: Running with ROS_DOMAIN_ID 1
+[67.708s] 13: ROS_DOMAIN_ID 1
+[67.708s] 13: [INFO] [launch]: All log files can be found below /root/.ros/log/2022-03-04-14-07-01-488668-ubuntu-20446
+[67.709s] 13: [INFO] [launch]: Default logging verbosity is set to INFO
+[67.722s] 13: test_generate_traces (autoware_reference_system.TestGenerateTracesAutowareReferenceSystem) ... generating traces...
+[67.722s] 13: [INFO] [autoware_default_staticsinglethreaded-1]: process started with pid [20451]
+[67.948s] 13: [autoware_default_staticsinglethreaded-1] [INFO] [rclcpp]: Currently used middleware can't loan messages. Local allocator will be used.
+[72.728s] 13: generating traces...
+[72.730s] 13: generating traces...
+[72.731s] 13: generating traces...
+[72.731s] 13: generating traces...
+[72.732s] 13: generating traces...
+[72.732s] 13: generating traces...
+[72.733s] 13: generating traces...
+[72.733s] 13: generating traces...
+[72.733s] 13: generating traces...
+[72.734s] 13: generating traces...
+[72.734s] 13: generating traces...
+[72.735s] 13: generating traces...
+[72.735s] 13: generating traces...
+[72.735s] 13: generating traces...
+[72.736s] 13: generating traces...
+[72.736s] 13: generating traces...
+[72.737s] 13: generating traces...
+[72.737s] 13: generating traces...
+[72.737s] 13: generating traces...
+[72.738s] 13: [INFO] [autoware_default_staticsinglethreaded-1]: sending signal 'SIGINT' to process[autoware_default_staticsinglethreaded-1]
+[72.738s] 13: [autoware_default_staticsinglethreaded-1] [INFO] [rclcpp]: signal_handler(signal_value=2)
+[74.338s] 13: [INFO] [autoware_default_staticsinglethreaded-1]: process has finished cleanly [pid 20451]
+[74.342s] 13: ok
+[74.342s] 13: 
+[74.343s] 13: ----------------------------------------------------------------------
+[74.344s] 13: Ran 1 test in 5.007s
+[74.344s] 13: 
+[74.345s] 13: OK
+[74.346s] 13: 
+[74.346s] 13: ----------------------------------------------------------------------
+[74.347s] 13: Ran 0 tests in 0.000s
+[74.348s] 13: 
+[74.350s] 13: OK
+[74.498s] 13: -- run_test.py: return code 0
+[74.499s] 13: -- run_test.py: verify result file '/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/generate_std_traces_autoware_default_staticsinglethreaded_rmw_cyclonedds_cpp_5s.py.xunit.xml'
+[74.539s] 13/36 Test #13: generate_std_traces_autoware_default_staticsinglethreaded_rmw_cyclonedds_cpp_5s.py ...   Passed    9.05 sec
+[74.539s] test 14
+[74.540s]       Start 14: generate_std_report_autoware_default_staticsinglethreaded_rmw_cyclonedds_cpp_5s
+[74.540s] 
+[74.541s] 14: Test command: /usr/bin/bash "-c" "python3 /home/ubuntu/reference_system_ws/install/autoware_reference_system/share/autoware_reference_system/test/generate_reports.py /home/ubuntu/reference_system_ws/install/autoware_reference_system/../../log/latest_test/autoware_reference_system" "COMMENT" "Generate Latency and Dropped Message reports from the std print log files"
+[74.541s] 14: Test timeout computed to be: 10000000
+[77.238s] 14: std report called
+[77.644s] 14/36 Test #14: generate_std_report_autoware_default_staticsinglethreaded_rmw_cyclonedds_cpp_5s ......   Passed    3.10 sec
+[77.645s] test 15
+[77.645s]       Start 15: generate_memory_trace_autoware_default_multithreaded_rmw_cyclonedds_cpp_5s
+[77.646s] 
+[77.646s] 15: Test command: /usr/bin/bash "-c" "chmod u+x /home/ubuntu/reference_system_ws/install/autoware_reference_system/share/autoware_reference_system/scripts/benchmark_one.sh;
+[77.647s]             RMW_IMPLEMENTATION=rmw_cyclonedds_cpp             /home/ubuntu/reference_system_ws/install/autoware_reference_system/share/autoware_reference_system/scripts/benchmark_one.sh             $(ros2 pkg prefix autoware_reference_system)/lib/autoware_reference_system/autoware_default_multithreaded             5             /root/.ros/memory             autoware_default_multithreaded_rmw_cyclonedds_cpp_5s.txt"
+[77.647s] 15: Test timeout computed to be: 300
+[79.315s] 15: Benchmarking: /home/ubuntu/reference_system_ws/install/autoware_reference_system/lib/autoware_reference_system/autoware_default_multithreaded
+[79.316s] 15: Duration: 5
+[79.316s] 15: writing logs to: /root/.ros/memory/autoware_default_multithreaded_rmw_cyclonedds_cpp_5s.txt
+[79.749s] 15: [INFO] [1646399233.712030167] [rclcpp]: Currently used middleware can't loan messages. Local allocator will be used.
+[86.209s] 15: Starting up command '/home/ubuntu/reference_system_ws/install/autoware_reference_system/lib/autoware_reference_system/autoware_default_multithreaded' and attaching to process
+[86.422s] 15/36 Test #15: generate_memory_trace_autoware_default_multithreaded_rmw_cyclonedds_cpp_5s ...........   Passed    8.78 sec
+[86.423s] test 16
+[86.423s]       Start 16: generate_memory_report_autoware_default_multithreaded_rmw_cyclonedds_cpp_5s
+[86.424s] 
+[86.424s] 16: Test command: /usr/bin/bash "-c" "python3 /home/ubuntu/reference_system_ws/install/autoware_reference_system/share/autoware_reference_system/test/generate_reports.py /root/.ros/memory/autoware_default_multithreaded_rmw_cyclonedds_cpp_5s.txt" "COMMENT" "Generate CPU and Memory Usage report from psrecord data"
+[86.425s] 16: Test timeout computed to be: 300
+[89.598s] 16: Output report to /root/.ros/memory/autoware_default_multithreaded_rmw_cyclonedds_cpp_5s_memory_and_cpu_usage_report.html
+[90.008s] 16/36 Test #16: generate_memory_report_autoware_default_multithreaded_rmw_cyclonedds_cpp_5s ..........   Passed    3.58 sec
+[90.008s] test 17
+[90.009s]       Start 17: generate_std_traces_autoware_default_multithreaded_rmw_cyclonedds_cpp_5s.py
+[90.009s] 
+[90.010s] 17: Test command: /usr/bin/python3 "-u" "/opt/ros/galactic/share/ament_cmake_test/cmake/run_test.py" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/generate_std_traces_autoware_default_multithreaded_rmw_cyclonedds_cpp_5s.py.xunit.xml" "--package-name" "autoware_reference_system" "--output-file" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/ros_test/generate_std_traces_autoware_default_multithreaded_rmw_cyclonedds_cpp_5s.py.txt" "--command" "ros2" "test" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/generate_std_traces_autoware_default_multithreaded_rmw_cyclonedds_cpp_5s.py" "--junit-xml=/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/generate_std_traces_autoware_default_multithreaded_rmw_cyclonedds_cpp_5s.py.xunit.xml" "--package-name=autoware_reference_system"
+[90.010s] 17: Test timeout computed to be: 10
+[90.259s] 17: -- run_test.py: invoking following command in '/home/ubuntu/reference_system_ws/build/autoware_reference_system':
+[90.260s] 17:  - ros2 test /home/ubuntu/reference_system_ws/build/autoware_reference_system/generate_std_traces_autoware_default_multithreaded_rmw_cyclonedds_cpp_5s.py --junit-xml=/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/generate_std_traces_autoware_default_multithreaded_rmw_cyclonedds_cpp_5s.py.xunit.xml --package-name=autoware_reference_system
+[92.221s] 17: Running with ROS_DOMAIN_ID 1
+[92.222s] 17: ROS_DOMAIN_ID 1
+[92.222s] 17: [INFO] [launch]: All log files can be found below /root/.ros/log/2022-03-04-14-07-26-002294-ubuntu-20493
+[92.223s] 17: [INFO] [launch]: Default logging verbosity is set to INFO
+[92.236s] 17: test_generate_traces (autoware_reference_system.TestGenerateTracesAutowareReferenceSystem) ... generating traces...
+[92.236s] 17: [INFO] [autoware_default_multithreaded-1]: process started with pid [20498]
+[92.462s] 17: [autoware_default_multithreaded-1] [INFO] [rclcpp]: Currently used middleware can't loan messages. Local allocator will be used.
+[97.241s] 17: generating traces...
+[97.242s] 17: generating traces...
+[97.243s] 17: generating traces...
+[97.243s] 17: generating traces...
+[97.244s] 17: generating traces...
+[97.244s] 17: generating traces...
+[97.245s] 17: generating traces...
+[97.246s] 17: generating traces...
+[97.246s] 17: generating traces...
+[97.246s] 17: generating traces...
+[97.247s] 17: generating traces...
+[97.247s] 17: generating traces...
+[97.248s] 17: generating traces...
+[97.248s] 17: generating traces...
+[97.248s] 17: generating traces...
+[97.249s] 17: generating traces...
+[97.249s] 17: generating traces...
+[97.250s] 17: generating traces...
+[97.250s] 17: generating traces...
+[97.250s] 17: [INFO] [autoware_default_multithreaded-1]: sending signal 'SIGINT' to process[autoware_default_multithreaded-1]
+[97.251s] 17: [autoware_default_multithreaded-1] [INFO] [rclcpp]: signal_handler(signal_value=2)
+[97.823s] 17: [INFO] [autoware_default_multithreaded-1]: process has finished cleanly [pid 20498]
+[97.827s] 17: ok
+[97.828s] 17: 
+[97.828s] 17: ----------------------------------------------------------------------
+[97.829s] 17: Ran 1 test in 5.007s
+[97.829s] 17: 
+[97.830s] 17: OK
+[97.831s] 17: 
+[97.832s] 17: ----------------------------------------------------------------------
+[97.832s] 17: Ran 0 tests in 0.000s
+[97.833s] 17: 
+[97.835s] 17: OK
+[97.983s] 17: -- run_test.py: return code 0
+[97.984s] 17: -- run_test.py: verify result file '/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/generate_std_traces_autoware_default_multithreaded_rmw_cyclonedds_cpp_5s.py.xunit.xml'
+[98.024s] 17/36 Test #17: generate_std_traces_autoware_default_multithreaded_rmw_cyclonedds_cpp_5s.py ..........   Passed    8.01 sec
+[98.024s] test 18
+[98.025s]       Start 18: generate_std_report_autoware_default_multithreaded_rmw_cyclonedds_cpp_5s
+[98.025s] 
+[98.026s] 18: Test command: /usr/bin/bash "-c" "python3 /home/ubuntu/reference_system_ws/install/autoware_reference_system/share/autoware_reference_system/test/generate_reports.py /home/ubuntu/reference_system_ws/install/autoware_reference_system/../../log/latest_test/autoware_reference_system" "COMMENT" "Generate Latency and Dropped Message reports from the std print log files"
+[98.026s] 18: Test timeout computed to be: 10000000
+[100.736s] 18: std report called
+[101.140s] 18/36 Test #18: generate_std_report_autoware_default_multithreaded_rmw_cyclonedds_cpp_5s .............   Passed    3.12 sec
+[101.141s] test 19
+[101.141s]       Start 19: generate_memory_trace_autoware_default_prioritized_rmw_cyclonedds_cpp_5s
+[101.142s] 
+[101.142s] 19: Test command: /usr/bin/bash "-c" "chmod u+x /home/ubuntu/reference_system_ws/install/autoware_reference_system/share/autoware_reference_system/scripts/benchmark_one.sh;
+[101.143s]             RMW_IMPLEMENTATION=rmw_cyclonedds_cpp             /home/ubuntu/reference_system_ws/install/autoware_reference_system/share/autoware_reference_system/scripts/benchmark_one.sh             $(ros2 pkg prefix autoware_reference_system)/lib/autoware_reference_system/autoware_default_prioritized             5             /root/.ros/memory             autoware_default_prioritized_rmw_cyclonedds_cpp_5s.txt"
+[101.143s] 19: Test timeout computed to be: 300
+[102.805s] 19: Benchmarking: /home/ubuntu/reference_system_ws/install/autoware_reference_system/lib/autoware_reference_system/autoware_default_prioritized
+[102.806s] 19: Duration: 5
+[102.806s] 19: writing logs to: /root/.ros/memory/autoware_default_prioritized_rmw_cyclonedds_cpp_5s.txt
+[103.239s] 19: [INFO] [1646399257.201942373] [rclcpp]: Currently used middleware can't loan messages. Local allocator will be used.
+[109.867s] 19: Starting up command '/home/ubuntu/reference_system_ws/install/autoware_reference_system/lib/autoware_reference_system/autoware_default_prioritized' and attaching to process
+[110.152s] 19/36 Test #19: generate_memory_trace_autoware_default_prioritized_rmw_cyclonedds_cpp_5s .............   Passed    9.01 sec
+[110.153s] test 20
+[110.153s]       Start 20: generate_memory_report_autoware_default_prioritized_rmw_cyclonedds_cpp_5s
+[110.154s] 
+[110.154s] 20: Test command: /usr/bin/bash "-c" "python3 /home/ubuntu/reference_system_ws/install/autoware_reference_system/share/autoware_reference_system/test/generate_reports.py /root/.ros/memory/autoware_default_prioritized_rmw_cyclonedds_cpp_5s.txt" "COMMENT" "Generate CPU and Memory Usage report from psrecord data"
+[110.155s] 20: Test timeout computed to be: 300
+[113.333s] 20: Output report to /root/.ros/memory/autoware_default_prioritized_rmw_cyclonedds_cpp_5s_memory_and_cpu_usage_report.html
+[113.743s] 20/36 Test #20: generate_memory_report_autoware_default_prioritized_rmw_cyclonedds_cpp_5s ............   Passed    3.59 sec
+[113.743s] test 21
+[113.744s]       Start 21: generate_std_traces_autoware_default_prioritized_rmw_cyclonedds_cpp_5s.py
+[113.744s] 
+[113.745s] 21: Test command: /usr/bin/python3 "-u" "/opt/ros/galactic/share/ament_cmake_test/cmake/run_test.py" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/generate_std_traces_autoware_default_prioritized_rmw_cyclonedds_cpp_5s.py.xunit.xml" "--package-name" "autoware_reference_system" "--output-file" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/ros_test/generate_std_traces_autoware_default_prioritized_rmw_cyclonedds_cpp_5s.py.txt" "--command" "ros2" "test" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/generate_std_traces_autoware_default_prioritized_rmw_cyclonedds_cpp_5s.py" "--junit-xml=/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/generate_std_traces_autoware_default_prioritized_rmw_cyclonedds_cpp_5s.py.xunit.xml" "--package-name=autoware_reference_system"
+[113.745s] 21: Test timeout computed to be: 10
+[113.994s] 21: -- run_test.py: invoking following command in '/home/ubuntu/reference_system_ws/build/autoware_reference_system':
+[113.995s] 21:  - ros2 test /home/ubuntu/reference_system_ws/build/autoware_reference_system/generate_std_traces_autoware_default_prioritized_rmw_cyclonedds_cpp_5s.py --junit-xml=/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/generate_std_traces_autoware_default_prioritized_rmw_cyclonedds_cpp_5s.py.xunit.xml --package-name=autoware_reference_system
+[115.948s] 21: Running with ROS_DOMAIN_ID 1
+[115.948s] 21: ROS_DOMAIN_ID 1
+[115.949s] 21: [INFO] [launch]: All log files can be found below /root/.ros/log/2022-03-04-14-07-49-730127-ubuntu-20544
+[115.949s] 21: [INFO] [launch]: Default logging verbosity is set to INFO
+[115.962s] 21: test_generate_traces (autoware_reference_system.TestGenerateTracesAutowareReferenceSystem) ... generating traces...
+[115.962s] 21: [INFO] [autoware_default_prioritized-1]: process started with pid [20549]
+[116.188s] 21: [autoware_default_prioritized-1] [INFO] [rclcpp]: Currently used middleware can't loan messages. Local allocator will be used.
+[120.968s] 21: generating traces...
+[120.970s] 21: generating traces...
+[120.971s] 21: generating traces...
+[120.971s] 21: generating traces...
+[120.972s] 21: generating traces...
+[120.972s] 21: generating traces...
+[120.972s] 21: generating traces...
+[120.973s] 21: generating traces...
+[120.973s] 21: generating traces...
+[120.973s] 21: generating traces...
+[120.980s] 21: generating traces...
+[120.980s] 21: generating traces...
+[120.984s] 21: generating traces...
+[120.984s] 21: generating traces...
+[120.987s] 21: generating traces...
+[120.987s] 21: generating traces...
+[120.988s] 21: generating traces...
+[120.988s] 21: generating traces...
+[120.989s] 21: generating traces...
+[120.990s] 21: [INFO] [autoware_default_prioritized-1]: sending signal 'SIGINT' to process[autoware_default_prioritized-1]
+[120.990s] 21: [autoware_default_prioritized-1] [INFO] [rclcpp]: signal_handler(signal_value=2)
+[121.563s] 21: [INFO] [autoware_default_prioritized-1]: process has finished cleanly [pid 20549]
+[121.567s] 21: ok
+[121.567s] 21: 
+[121.568s] 21: ----------------------------------------------------------------------
+[121.569s] 21: Ran 1 test in 5.007s
+[121.570s] 21: 
+[121.570s] 21: OK
+[121.571s] 21: 
+[121.572s] 21: ----------------------------------------------------------------------
+[121.573s] 21: Ran 0 tests in 0.000s
+[121.574s] 21: 
+[121.575s] 21: OK
+[121.722s] 21: -- run_test.py: return code 0
+[121.723s] 21: -- run_test.py: verify result file '/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/generate_std_traces_autoware_default_prioritized_rmw_cyclonedds_cpp_5s.py.xunit.xml'
+[121.763s] 21/36 Test #21: generate_std_traces_autoware_default_prioritized_rmw_cyclonedds_cpp_5s.py ............   Passed    8.02 sec
+[121.764s] test 22
+[121.764s]       Start 22: generate_std_report_autoware_default_prioritized_rmw_cyclonedds_cpp_5s
+[121.765s] 
+[121.765s] 22: Test command: /usr/bin/bash "-c" "python3 /home/ubuntu/reference_system_ws/install/autoware_reference_system/share/autoware_reference_system/test/generate_reports.py /home/ubuntu/reference_system_ws/install/autoware_reference_system/../../log/latest_test/autoware_reference_system" "COMMENT" "Generate Latency and Dropped Message reports from the std print log files"
+[121.765s] 22: Test timeout computed to be: 10000000
+[124.462s] 22: std report called
+[124.870s] 22/36 Test #22: generate_std_report_autoware_default_prioritized_rmw_cyclonedds_cpp_5s ...............   Passed    3.11 sec
+[124.870s] test 23
+[124.871s]       Start 23: generate_memory_trace_autoware_default_cbg_rmw_cyclonedds_cpp_5s
+[124.871s] 
+[124.871s] 23: Test command: /usr/bin/bash "-c" "chmod u+x /home/ubuntu/reference_system_ws/install/autoware_reference_system/share/autoware_reference_system/scripts/benchmark_one.sh;
+[124.872s]             RMW_IMPLEMENTATION=rmw_cyclonedds_cpp             /home/ubuntu/reference_system_ws/install/autoware_reference_system/share/autoware_reference_system/scripts/benchmark_one.sh             $(ros2 pkg prefix autoware_reference_system)/lib/autoware_reference_system/autoware_default_cbg             5             /root/.ros/memory             autoware_default_cbg_rmw_cyclonedds_cpp_5s.txt"
+[124.872s] 23: Test timeout computed to be: 300
+[126.539s] 23: Benchmarking: /home/ubuntu/reference_system_ws/install/autoware_reference_system/lib/autoware_reference_system/autoware_default_cbg
+[126.540s] 23: Duration: 5
+[126.540s] 23: writing logs to: /root/.ros/memory/autoware_default_cbg_rmw_cyclonedds_cpp_5s.txt
+[126.972s] 23: [INFO] [1646399280.935443324] [rclcpp]: Currently used middleware can't loan messages. Local allocator will be used.
+[133.653s] 23: Starting up command '/home/ubuntu/reference_system_ws/install/autoware_reference_system/lib/autoware_reference_system/autoware_default_cbg' and attaching to process
+[133.910s] 23/36 Test #23: generate_memory_trace_autoware_default_cbg_rmw_cyclonedds_cpp_5s .....................   Passed    9.04 sec
+[133.910s] test 24
+[133.911s]       Start 24: generate_memory_report_autoware_default_cbg_rmw_cyclonedds_cpp_5s
+[133.911s] 
+[133.912s] 24: Test command: /usr/bin/bash "-c" "python3 /home/ubuntu/reference_system_ws/install/autoware_reference_system/share/autoware_reference_system/test/generate_reports.py /root/.ros/memory/autoware_default_cbg_rmw_cyclonedds_cpp_5s.txt" "COMMENT" "Generate CPU and Memory Usage report from psrecord data"
+[133.912s] 24: Test timeout computed to be: 300
+[137.097s] 24: Output report to /root/.ros/memory/autoware_default_cbg_rmw_cyclonedds_cpp_5s_memory_and_cpu_usage_report.html
+[137.507s] 24/36 Test #24: generate_memory_report_autoware_default_cbg_rmw_cyclonedds_cpp_5s ....................   Passed    3.60 sec
+[137.508s] test 25
+[137.508s]       Start 25: generate_std_traces_autoware_default_cbg_rmw_cyclonedds_cpp_5s.py
+[137.508s] 
+[137.509s] 25: Test command: /usr/bin/python3 "-u" "/opt/ros/galactic/share/ament_cmake_test/cmake/run_test.py" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/generate_std_traces_autoware_default_cbg_rmw_cyclonedds_cpp_5s.py.xunit.xml" "--package-name" "autoware_reference_system" "--output-file" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/ros_test/generate_std_traces_autoware_default_cbg_rmw_cyclonedds_cpp_5s.py.txt" "--command" "ros2" "test" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/generate_std_traces_autoware_default_cbg_rmw_cyclonedds_cpp_5s.py" "--junit-xml=/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/generate_std_traces_autoware_default_cbg_rmw_cyclonedds_cpp_5s.py.xunit.xml" "--package-name=autoware_reference_system"
+[137.509s] 25: Test timeout computed to be: 10
+[137.758s] 25: -- run_test.py: invoking following command in '/home/ubuntu/reference_system_ws/build/autoware_reference_system':
+[137.758s] 25:  - ros2 test /home/ubuntu/reference_system_ws/build/autoware_reference_system/generate_std_traces_autoware_default_cbg_rmw_cyclonedds_cpp_5s.py --junit-xml=/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/generate_std_traces_autoware_default_cbg_rmw_cyclonedds_cpp_5s.py.xunit.xml --package-name=autoware_reference_system
+[139.711s] 25: Running with ROS_DOMAIN_ID 1
+[139.712s] 25: ROS_DOMAIN_ID 1
+[139.712s] 25: [INFO] [launch]: All log files can be found below /root/.ros/log/2022-03-04-14-08-13-495236-ubuntu-20598
+[139.712s] 25: [INFO] [launch]: Default logging verbosity is set to INFO
+[139.725s] 25: test_generate_traces (autoware_reference_system.TestGenerateTracesAutowareReferenceSystem) ... generating traces...
+[139.726s] 25: [INFO] [autoware_default_cbg-1]: process started with pid [20604]
+[139.952s] 25: [autoware_default_cbg-1] [INFO] [rclcpp]: Currently used middleware can't loan messages. Local allocator will be used.
+[144.731s] 25: generating traces...
+[144.734s] 25: generating traces...
+[144.736s] 25: generating traces...
+[144.738s] 25: generating traces...
+[144.739s] 25: generating traces...
+[144.740s] 25: generating traces...
+[144.742s] 25: generating traces...
+[144.742s] 25: generating traces...
+[144.742s] 25: generating traces...
+[144.743s] 25: generating traces...
+[144.743s] 25: generating traces...
+[144.744s] 25: generating traces...
+[144.745s] 25: generating traces...
+[144.745s] 25: generating traces...
+[144.746s] 25: generating traces...
+[144.746s] 25: generating traces...
+[144.747s] 25: generating traces...
+[144.747s] 25: generating traces...
+[144.748s] 25: generating traces...
+[144.748s] 25: [INFO] [autoware_default_cbg-1]: sending signal 'SIGINT' to process[autoware_default_cbg-1]
+[144.749s] 25: [autoware_default_cbg-1] [INFO] [rclcpp]: signal_handler(signal_value=2)
+[145.355s] 25: [INFO] [autoware_default_cbg-1]: process has finished cleanly [pid 20604]
+[145.358s] 25: ok
+[145.359s] 25: 
+[145.360s] 25: ----------------------------------------------------------------------
+[145.360s] 25: Ran 1 test in 5.007s
+[145.361s] 25: 
+[145.362s] 25: OK
+[145.363s] 25: 
+[145.363s] 25: ----------------------------------------------------------------------
+[145.365s] 25: Ran 0 tests in 0.000s
+[145.366s] 25: 
+[145.367s] 25: OK
+[145.514s] 25: -- run_test.py: return code 0
+[145.515s] 25: -- run_test.py: verify result file '/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/generate_std_traces_autoware_default_cbg_rmw_cyclonedds_cpp_5s.py.xunit.xml'
+[145.554s] 25/36 Test #25: generate_std_traces_autoware_default_cbg_rmw_cyclonedds_cpp_5s.py ....................   Passed    8.05 sec
+[145.555s] test 26
+[145.555s]       Start 26: generate_std_report_autoware_default_cbg_rmw_cyclonedds_cpp_5s
+[145.556s] 
+[145.556s] 26: Test command: /usr/bin/bash "-c" "python3 /home/ubuntu/reference_system_ws/install/autoware_reference_system/share/autoware_reference_system/test/generate_reports.py /home/ubuntu/reference_system_ws/install/autoware_reference_system/../../log/latest_test/autoware_reference_system" "COMMENT" "Generate Latency and Dropped Message reports from the std print log files"
+[145.557s] 26: Test timeout computed to be: 10000000
+[148.251s] 26: std report called
+[148.657s] 26/36 Test #26: generate_std_report_autoware_default_cbg_rmw_cyclonedds_cpp_5s .......................   Passed    3.10 sec
+[148.658s] test 27
+[148.658s]       Start 27: generate_summary_report_memory_5s
+[148.658s] 
+[148.659s] 27: Test command: /usr/bin/bash "-c" "python3 /home/ubuntu/reference_system_ws/install/autoware_reference_system/share/autoware_reference_system/test/generate_summary_reports.py /root/.ros/memory 5" "COMMENT" "Generate Summary Report"
+[148.659s] 27: Test timeout computed to be: 300
+[152.895s] 27: memory summary report
+[152.896s] 27: Output report to /root/.ros/memory/memory_and_cpu_usage_summary_report_5s.html
+[153.308s] 27/36 Test #27: generate_summary_report_memory_5s ....................................................   Passed    4.65 sec
+[153.308s] test 28
+[153.309s]       Start 28: generate_summary_report_std_5s
+[153.309s] 
+[153.309s] 28: Test command: /usr/bin/bash "-c" "python3 /home/ubuntu/reference_system_ws/install/autoware_reference_system/share/autoware_reference_system/test/generate_summary_reports.py /home/ubuntu/reference_system_ws/install/autoware_reference_system/../../log/latest_test/autoware_reference_system 5" "COMMENT" "Generate Summary Report"
+[153.310s] 28: Test timeout computed to be: 300
+[156.009s] 28: std latency summary report
+[156.010s] 28: Output report to /home/ubuntu/reference_system_ws/install/autoware_reference_system/../../log/latest_test/autoware_reference_system/executor_kpi_summary_report_5s.html
+[156.382s] 28: Traceback (most recent call last):
+[156.383s] 28:   File "/home/ubuntu/reference_system_ws/install/autoware_reference_system/share/autoware_reference_system/test/generate_summary_reports.py", line 104, in <module>
+[156.384s] 28:     generate_summary_reports(wd + tracetype + '/', duration)
+[156.385s] 28:   File "/home/ubuntu/reference_system_ws/install/autoware_reference_system/share/autoware_reference_system/test/generate_summary_reports.py", line 86, in generate_summary_reports
+[156.387s] 28:     std_summary_report(path, duration)
+[156.388s] 28:   File "/home/ubuntu/reference_system_ws/install/autoware_reference_system/share/autoware_reference_system/test/generate_summary_reports.py", line 51, in std_summary_report
+[156.390s] 28:     std_summary = std_latency.summary(
+[156.391s] 28:   File "/home/ubuntu/reference_system_ws/install/autoware_reference_system/share/autoware_reference_system/test/std_latency.py", line 48, in summary
+[156.392s] 28:     all_data['low'].append(results[2]['hot_path'][data_type]['low'])
+[156.393s] 28: KeyError: 'low'
+[156.840s] 28/36 Test #28: generate_summary_report_std_5s .......................................................***Failed    3.53 sec
+[156.841s] test 29
+[156.841s]       Start 29: copyright
+[156.842s] 
+[156.842s] 29: Test command: /usr/bin/python3 "-u" "/opt/ros/galactic/share/ament_cmake_test/cmake/run_test.py" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/copyright.xunit.xml" "--package-name" "autoware_reference_system" "--output-file" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/ament_copyright/copyright.txt" "--command" "/opt/ros/galactic/bin/ament_copyright" "--xunit-file" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/copyright.xunit.xml"
+[156.843s] 29: Test timeout computed to be: 120
+[157.090s] 29: -- run_test.py: invoking following command in '/home/ubuntu/reference_system_ws/src/reference-system/autoware_reference_system':
+[157.092s] 29:  - /opt/ros/galactic/bin/ament_copyright --xunit-file /home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/copyright.xunit.xml
+[167.719s] 29: No problems found, checked 29 files
+[167.780s] 29: -- run_test.py: return code 0
+[167.781s] 29: -- run_test.py: verify result file '/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/copyright.xunit.xml'
+[167.821s] 29/36 Test #29: copyright ............................................................................   Passed   10.98 sec
+[167.821s] test 30
+[167.822s]       Start 30: cppcheck
+[167.822s] 
+[167.823s] 30: Test command: /usr/bin/python3 "-u" "/opt/ros/galactic/share/ament_cmake_test/cmake/run_test.py" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/cppcheck.xunit.xml" "--package-name" "autoware_reference_system" "--output-file" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/ament_cppcheck/cppcheck.txt" "--command" "/opt/ros/galactic/bin/ament_cppcheck" "--xunit-file" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/cppcheck.xunit.xml" "--include_dirs" "/home/ubuntu/reference_system_ws/src/reference-system/autoware_reference_system/include"
+[167.823s] 30: Test timeout computed to be: 300
+[168.071s] 30: -- run_test.py: invoking following command in '/home/ubuntu/reference_system_ws/src/reference-system/autoware_reference_system':
+[168.072s] 30:  - /opt/ros/galactic/bin/ament_cppcheck --xunit-file /home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/cppcheck.xunit.xml --include_dirs /home/ubuntu/reference_system_ws/src/reference-system/autoware_reference_system/include
+[169.280s] 30: No problems found
+[169.347s] 30: -- run_test.py: return code 0
+[169.347s] 30: -- run_test.py: verify result file '/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/cppcheck.xunit.xml'
+[169.388s] 30/36 Test #30: cppcheck .............................................................................   Passed    1.57 sec
+[169.388s] test 31
+[169.388s]       Start 31: cpplint
+[169.389s] 
+[169.389s] 31: Test command: /usr/bin/python3 "-u" "/opt/ros/galactic/share/ament_cmake_test/cmake/run_test.py" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/cpplint.xunit.xml" "--package-name" "autoware_reference_system" "--output-file" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/ament_cpplint/cpplint.txt" "--command" "/opt/ros/galactic/bin/ament_cpplint" "--xunit-file" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/cpplint.xunit.xml"
+[169.390s] 31: Test timeout computed to be: 120
+[169.638s] 31: -- run_test.py: invoking following command in '/home/ubuntu/reference_system_ws/src/reference-system/autoware_reference_system':
+[169.638s] 31:  - /opt/ros/galactic/bin/ament_cpplint --xunit-file /home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/cpplint.xunit.xml
+[171.735s] 31: Using '--root=/home/ubuntu/reference_system_ws/src/reference-system/autoware_reference_system/include' argument
+[171.736s] 31: 
+[171.737s] 31: Done processing /home/ubuntu/reference_system_ws/src/reference-system/autoware_reference_system/include/autoware_reference_system/autoware_system_builder.hpp
+[171.738s] 31: 
+[171.740s] 31: Done processing /home/ubuntu/reference_system_ws/src/reference-system/autoware_reference_system/include/autoware_reference_system/autoware_system_builder_utils.hpp
+[171.741s] 31: 
+[171.742s] 31: Done processing /home/ubuntu/reference_system_ws/src/reference-system/autoware_reference_system/include/autoware_reference_system/system/timing/benchmark.hpp
+[171.743s] 31: 
+[171.744s] 31: Done processing /home/ubuntu/reference_system_ws/src/reference-system/autoware_reference_system/include/autoware_reference_system/system/timing/default.hpp
+[171.745s] 31: 
+[171.746s] 31: Using '--root=/home/ubuntu/reference_system_ws/src/reference-system/autoware_reference_system/src' argument
+[171.747s] 31: 
+[171.748s] 31: Done processing /home/ubuntu/reference_system_ws/src/reference-system/autoware_reference_system/src/ros2/number_cruncher_benchmark.cpp
+[171.749s] 31: 
+[171.749s] 31: Done processing /home/ubuntu/reference_system_ws/src/reference-system/autoware_reference_system/src/ros2/executor/autoware_default_cbg.cpp
+[171.750s] 31: 
+[171.751s] 31: Done processing /home/ubuntu/reference_system_ws/src/reference-system/autoware_reference_system/src/ros2/executor/autoware_default_multithreaded.cpp
+[171.752s] 31: 
+[171.753s] 31: Done processing /home/ubuntu/reference_system_ws/src/reference-system/autoware_reference_system/src/ros2/executor/autoware_default_prioritized.cpp
+[171.755s] 31: 
+[171.756s] 31: Done processing /home/ubuntu/reference_system_ws/src/reference-system/autoware_reference_system/src/ros2/executor/autoware_default_singlethreaded.cpp
+[171.757s] 31: 
+[171.758s] 31: Done processing /home/ubuntu/reference_system_ws/src/reference-system/autoware_reference_system/src/ros2/executor/autoware_default_staticsinglethreaded.cpp
+[171.759s] 31: 
+[171.759s] 31: Using '--root=/home/ubuntu/reference_system_ws/src/reference-system/autoware_reference_system/test' argument
+[171.760s] 31: 
+[171.761s] 31: Done processing /home/ubuntu/reference_system_ws/src/reference-system/autoware_reference_system/test/test_autoware_reference_system.cpp
+[171.762s] 31: 
+[171.763s] 31: No problems found
+[171.796s] 31: -- run_test.py: return code 0
+[171.796s] 31: -- run_test.py: verify result file '/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/cpplint.xunit.xml'
+[171.837s] 31/36 Test #31: cpplint ..............................................................................   Passed    2.45 sec
+[171.837s] test 32
+[171.838s]       Start 32: flake8
+[171.838s] 
+[171.839s] 32: Test command: /usr/bin/python3 "-u" "/opt/ros/galactic/share/ament_cmake_test/cmake/run_test.py" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/flake8.xunit.xml" "--package-name" "autoware_reference_system" "--output-file" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/ament_flake8/flake8.txt" "--command" "/opt/ros/galactic/bin/ament_flake8" "--xunit-file" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/flake8.xunit.xml"
+[171.839s] 32: Test timeout computed to be: 60
+[172.086s] 32: -- run_test.py: invoking following command in '/home/ubuntu/reference_system_ws/src/reference-system/autoware_reference_system':
+[172.087s] 32:  - /opt/ros/galactic/bin/ament_flake8 --xunit-file /home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/flake8.xunit.xml
+[174.310s] 32: 
+[174.311s] 32: 14 files checked
+[174.312s] 32: No problems found
+[174.313s] 32: 
+[174.313s] 32: Checked files:
+[174.314s] 32: 
+[174.315s] 32: * ./test/trace_utils.py
+[174.316s] 32: * ./test/generate_reports.py
+[174.317s] 32: * ./test/dropped_messages.py
+[174.319s] 32: * ./test/generate_std_traces.py
+[174.320s] 32: * ./test/test_requirements.py
+[174.321s] 32: * ./test/generate_callback_traces.py
+[174.322s] 32: * ./test/generate_summary_reports.py
+[174.323s] 32: * ./test/memory_usage.py
+[174.325s] 32: * ./test/callback_duration.py
+[174.326s] 32: * ./test/test_platform.py
+[174.326s] 32: * ./test/utils.py
+[174.327s] 32: * ./test/std_latency.py
+[174.328s] 32: * ./test/constants.py
+[174.329s] 32: * ./test/errors.py
+[174.415s] 32: -- run_test.py: return code 0
+[174.416s] 32: -- run_test.py: verify result file '/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/flake8.xunit.xml'
+[174.456s] 32/36 Test #32: flake8 ...............................................................................   Passed    2.62 sec
+[174.457s] test 33
+[174.457s]       Start 33: lint_cmake
+[174.457s] 
+[174.458s] 33: Test command: /usr/bin/python3 "-u" "/opt/ros/galactic/share/ament_cmake_test/cmake/run_test.py" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/lint_cmake.xunit.xml" "--package-name" "autoware_reference_system" "--output-file" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/ament_lint_cmake/lint_cmake.txt" "--command" "/opt/ros/galactic/bin/ament_lint_cmake" "--xunit-file" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/lint_cmake.xunit.xml"
+[174.458s] 33: Test timeout computed to be: 60
+[174.705s] 33: -- run_test.py: invoking following command in '/home/ubuntu/reference_system_ws/src/reference-system/autoware_reference_system':
+[174.705s] 33:  - /opt/ros/galactic/bin/ament_lint_cmake --xunit-file /home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/lint_cmake.xunit.xml
+[175.618s] 33: 
+[175.619s] 33: No problems found
+[175.676s] 33: -- run_test.py: return code 0
+[175.676s] 33: -- run_test.py: verify result file '/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/lint_cmake.xunit.xml'
+[175.717s] 33/36 Test #33: lint_cmake ...........................................................................   Passed    1.26 sec
+[175.717s] test 34
+[175.717s]       Start 34: pep257
+[175.718s] 
+[175.718s] 34: Test command: /usr/bin/python3 "-u" "/opt/ros/galactic/share/ament_cmake_test/cmake/run_test.py" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/pep257.xunit.xml" "--package-name" "autoware_reference_system" "--output-file" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/ament_pep257/pep257.txt" "--command" "/opt/ros/galactic/bin/ament_pep257" "--xunit-file" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/pep257.xunit.xml"
+[175.719s] 34: Test timeout computed to be: 60
+[175.967s] 34: -- run_test.py: invoking following command in '/home/ubuntu/reference_system_ws/src/reference-system/autoware_reference_system':
+[175.968s] 34:  - /opt/ros/galactic/bin/ament_pep257 --xunit-file /home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/pep257.xunit.xml
+[177.614s] 34: checking ./test/callback_duration.py
+[177.615s] 34: checking ./test/constants.py
+[177.616s] 34: checking ./test/dropped_messages.py
+[177.617s] 34: checking ./test/errors.py
+[177.618s] 34: checking ./test/generate_callback_traces.py
+[177.619s] 34: checking ./test/generate_reports.py
+[177.621s] 34: checking ./test/generate_std_traces.py
+[177.622s] 34: checking ./test/generate_summary_reports.py
+[177.623s] 34: checking ./test/memory_usage.py
+[177.624s] 34: checking ./test/std_latency.py
+[177.625s] 34: checking ./test/test_platform.py
+[177.626s] 34: checking ./test/test_requirements.py
+[177.627s] 34: checking ./test/trace_utils.py
+[177.628s] 34: checking ./test/utils.py
+[177.629s] 34: No problems found
+[177.697s] 34: -- run_test.py: return code 0
+[177.697s] 34: -- run_test.py: verify result file '/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/pep257.xunit.xml'
+[177.738s] 34/36 Test #34: pep257 ...............................................................................   Passed    2.02 sec
+[177.739s] test 35
+[177.740s]       Start 35: uncrustify
+[177.740s] 
+[177.741s] 35: Test command: /usr/bin/python3 "-u" "/opt/ros/galactic/share/ament_cmake_test/cmake/run_test.py" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/uncrustify.xunit.xml" "--package-name" "autoware_reference_system" "--output-file" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/ament_uncrustify/uncrustify.txt" "--command" "/opt/ros/galactic/bin/ament_uncrustify" "--xunit-file" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/uncrustify.xunit.xml"
+[177.741s] 35: Test timeout computed to be: 60
+[177.989s] 35: -- run_test.py: invoking following command in '/home/ubuntu/reference_system_ws/src/reference-system/autoware_reference_system':
+[177.990s] 35:  - /opt/ros/galactic/bin/ament_uncrustify --xunit-file /home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/uncrustify.xunit.xml
+[178.970s] 35: No code style divergence in file 'include/autoware_reference_system/autoware_system_builder.hpp'
+[178.971s] 35: 
+[178.972s] 35: No code style divergence in file 'include/autoware_reference_system/autoware_system_builder_utils.hpp'
+[178.973s] 35: 
+[178.974s] 35: No code style divergence in file 'include/autoware_reference_system/system/timing/benchmark.hpp'
+[178.975s] 35: 
+[178.976s] 35: No code style divergence in file 'include/autoware_reference_system/system/timing/default.hpp'
+[178.977s] 35: 
+[178.978s] 35: No code style divergence in file 'src/ros2/executor/autoware_default_cbg.cpp'
+[178.979s] 35: 
+[178.980s] 35: No code style divergence in file 'src/ros2/executor/autoware_default_multithreaded.cpp'
+[178.981s] 35: 
+[178.982s] 35: No code style divergence in file 'src/ros2/executor/autoware_default_prioritized.cpp'
+[178.983s] 35: 
+[178.984s] 35: No code style divergence in file 'src/ros2/executor/autoware_default_singlethreaded.cpp'
+[178.985s] 35: 
+[178.986s] 35: No code style divergence in file 'src/ros2/executor/autoware_default_staticsinglethreaded.cpp'
+[178.986s] 35: 
+[178.987s] 35: No code style divergence in file 'src/ros2/number_cruncher_benchmark.cpp'
+[178.988s] 35: 
+[178.988s] 35: No code style divergence in file 'test/test_autoware_reference_system.cpp'
+[178.989s] 35: 
+[178.990s] 35: No problems found
+[179.034s] 35: -- run_test.py: return code 0
+[179.035s] 35: -- run_test.py: verify result file '/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/uncrustify.xunit.xml'
+[179.075s] 35/36 Test #35: uncrustify ...........................................................................   Passed    1.34 sec
+[179.076s] test 36
+[179.076s]       Start 36: xmllint
+[179.076s] 
+[179.077s] 36: Test command: /usr/bin/python3 "-u" "/opt/ros/galactic/share/ament_cmake_test/cmake/run_test.py" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/xmllint.xunit.xml" "--package-name" "autoware_reference_system" "--output-file" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/ament_xmllint/xmllint.txt" "--command" "/opt/ros/galactic/bin/ament_xmllint" "--xunit-file" "/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/xmllint.xunit.xml"
+[179.077s] 36: Test timeout computed to be: 60
+[179.325s] 36: -- run_test.py: invoking following command in '/home/ubuntu/reference_system_ws/src/reference-system/autoware_reference_system':
+[179.326s] 36:  - /opt/ros/galactic/bin/ament_xmllint --xunit-file /home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/xmllint.xunit.xml
+[180.934s] 36: File 'package.xml' is valid
+[180.935s] 36: 
+[180.935s] 36: No problems found
+[180.998s] 36: -- run_test.py: return code 0
+[180.999s] 36: -- run_test.py: verify result file '/home/ubuntu/reference_system_ws/build/autoware_reference_system/test_results/autoware_reference_system/xmllint.xunit.xml'
+[181.038s] 36/36 Test #36: xmllint ..............................................................................   Passed    1.96 sec
+[181.041s] 
+[181.041s] 97% tests passed[0;0m, [0;31m1 tests failed[0;0m out of 36
+[181.042s] 
+[181.042s] Label Time Summary:
+[181.042s] copyright     =  10.98 sec*proc (1 test)
+[181.043s] cppcheck      =   1.57 sec*proc (1 test)
+[181.043s] cpplint       =   2.45 sec*proc (1 test)
+[181.043s] flake8        =   2.62 sec*proc (1 test)
+[181.044s] lint_cmake    =   1.26 sec*proc (1 test)
+[181.044s] linter        =  24.19 sec*proc (8 tests)
+[181.044s] pep257        =   2.02 sec*proc (1 test)
+[181.045s] pytest        =   2.19 sec*proc (1 test)
+[181.045s] uncrustify    =   1.34 sec*proc (1 test)
+[181.045s] xmllint       =   1.96 sec*proc (1 test)
+[181.046s] 
+[181.046s] Total Test time (real) = 180.86 sec
+[181.046s] 
+[181.047s] The following tests FAILED:
+[181.047s] 	[0;31m 28 - generate_summary_report_std_5s (Failed)[0;0m
+[181.058s] Errors while running CTest
+[181.064s] Invoked command in '/home/ubuntu/reference_system_ws/build/autoware_reference_system' returned '8': AMENT_PREFIX_PATH=/home/ubuntu/reference_system_ws/install/tracetools_launch:/home/ubuntu/reference_system_ws/install/tracetools_trace:/home/ubuntu/reference_system_ws/install/ros2trace:/home/ubuntu/reference_system_ws/install/tracetools_test:/home/ubuntu/reference_system_ws/install/tracetools_read:/home/ubuntu/reference_system_ws/install/tracetools:/home/ubuntu/reference_system_ws/install/autoware_reference_system:/home/ubuntu/reference_system_ws/install/reference_system:/home/ubuntu/reference_system_ws/install/reference_interfaces:/opt/ros/galactic CMAKE_PREFIX_PATH=/home/ubuntu/reference_system_ws/install/autoware_reference_system:/home/ubuntu/reference_system_ws/install/reference_system:/home/ubuntu/reference_system_ws/install/reference_interfaces:/home/ubuntu/reference_system_ws/install/tracetools_test:/home/ubuntu/reference_system_ws/install/tracetools LD_LIBRARY_PATH=/home/ubuntu/reference_system_ws/install/reference_interfaces/lib:/home/ubuntu/reference_system_ws/install/tracetools/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/lib/aarch64-linux-gnu:/opt/ros/galactic/lib PYTHONPATH=/home/ubuntu/reference_system_ws/install/tracetools_launch/lib/python3.8/site-packages:/home/ubuntu/reference_system_ws/install/tracetools_trace/lib/python3.8/site-packages:/home/ubuntu/reference_system_ws/install/reference_interfaces/lib/python3.8/site-packages:/home/ubuntu/reference_system_ws/install/ros2trace/lib/python3.8/site-packages:/home/ubuntu/reference_system_ws/install/tracetools_test/lib/python3.8/site-packages:/home/ubuntu/reference_system_ws/install/tracetools_read/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages /usr/bin/ctest -C Release -D ExperimentalTest --no-compress-output -V --force-new-ctest-process
