@@ -8,5 +8,5 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
-      - run: apt update && apt install -y tree
+      - run: sudo apt update && sudo apt install -y tree
       - run: "$(tree -H '.' -L 1 --noreport --charset utf-8 -o index.html)"
