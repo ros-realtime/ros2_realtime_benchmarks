@@ -10,4 +10,4 @@ jobs:
       - uses: actions/checkout@v2
         with:
       - run: apt update && apt install tree
-      - run: tree -H '.' -L 1 --noreport --charset utf-8 -o index.html
+      - run: "$(tree -H '.' -L 1 --noreport --charset utf-8 -o index.html)"
