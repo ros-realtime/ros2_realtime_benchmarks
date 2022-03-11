@@ -1,5 +1,11 @@
 # pendulum test real-time benchmarks
 
+## Introduction
+
+- [performance_test](https://gitlab.com/ApexAI/performance_test)
+- [performance_report](https://gitlab.com/ApexAI/performance_test/-/tree/master/performance_report)
+- [Performance Testing in ROS 2](https://drive.google.com/file/d/15nX80RK6aS8abZvQAOnMNUEgh7px9V5S/view)
+
 ## Setup
 
 Clone configuration files repository:
