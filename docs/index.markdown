@@ -7,7 +7,7 @@ layout: home
 
 ## Benchmark results
 
-[See benchmark results](/index.html)
+[See benchmark results]({{ site.baseurl }}/benchmark_results/index.html)
 
 ## Benchmarking tools
 
