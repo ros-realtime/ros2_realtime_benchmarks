@@ -9,7 +9,7 @@ layout: default
 
 ## Introduction
 
-A project to host ROS real-time benchmark results. It includes benchmark results
+A project to host ROS 2 real-time benchmark results. It includes benchmark results
 for some ROS 2 benchmarking tools.
 
 Some of the experiments included are run with the reference platforms used in the
@@ -26,14 +26,14 @@ tool.
 ### performance_test
 
 - Results: [performance_test results](/benchmark_results/performance_test_benchmarks/index.html)
-- Instructions: [performance_test instructions](/benchmark_results/performance_test_benchmarks/README.md)
+- Instructions: [performance_test instructions](instructions/performance_test.markdown)
 - Repository: [https://gitlab.com/ApexAI/performance_test](https://gitlab.com/ApexAI/performance_test)
 - Real-time benchmarks configurations: [performance_test_rt_cfg](https://github.com/ros-realtime/performance_test_rt_cfg)
 
 ### pendulum_control
 
 - Results: [pendulum_control benchmarks](/benchmark_results/pendulum_demo_benchmarks/index.html)
-- Instructions: [pendulum_control instructions](/benchmark_results/pendulum_demo_benchmarks/README.md)
+- Instructions: [pendulum_control instructions](instructions/pendulum_demo.markdown)
 - Repository: [https://github.com/ros2/demos/tree/master/pendulum_control](https://github.com/ros2/demos/tree/master/pendulum_control)
 
 ### reference_system
