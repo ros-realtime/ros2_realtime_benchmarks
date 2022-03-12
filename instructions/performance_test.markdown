@@ -1,4 +1,4 @@
-# pendulum test real-time benchmarks
+# Instructions for performance_test real-time benchmark
 
 ## Introduction
 
@@ -8,13 +8,17 @@
 
 ## Setup
 
-Clone configuration files repository:
+Build `performance_test` following the official instructions:
+
+- https://gitlab.com/ApexAI/performance_test#building-the-performance_test-tool
+
+Clone configuration files repository in the home directory:
 
 ```
 git clone https://github.com/ros-realtime/performance_test_rt_cfg.git
 ```
 
-## How to run the benchmarks
+## Run the benchmarks
 
 ```bash
 # It takes around 4 minutes
