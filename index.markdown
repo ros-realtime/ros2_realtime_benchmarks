@@ -7,11 +7,11 @@ layout: home
 
 ## Benchmark results
 
-[See benchmark results]({{ site.baseurl }}/benchmark_results/index.html)
+[See benchmark results](/benchmark_results/index.html)
 
 ## Benchmarking tools
 
-- [peformance_test](https://gitlab.com/ApexAI/performance_test)
+- [performance_test](https://gitlab.com/ApexAI/performance_test)
 - [reference_system](https://github.com/ros-realtime/reference-system)
 - [pendulum_control](https://github.com/ros2/demos/tree/master/pendulum_control)
 
