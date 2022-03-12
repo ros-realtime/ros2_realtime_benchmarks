@@ -14,16 +14,16 @@ Clone configuration files repository:
 git clone https://github.com/ros-realtime/performance_test_rt_cfg.git
 ```
 
-## How to run the benchmakrs
+## How to run the benchmarks
 
 ```bash
-# Takes around 4 minutes
+# It takes around 4 minutes
 ros2 run performance_report runner \
   --log-dir perf_logs \
   --test-name experiments \
   --configs ~/performance_test_rt_cfg/runner/run_rt_experiment_single.yaml
 
-# Takes around 24 minutes
+# It takes around 24 minutes
 ros2 run performance_report runner \
   --log-dir perf_logs \
   --test-name experiments \
