@@ -15,7 +15,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install curl git -y
           curl https://raw.githubusercontent.com/carlossvg/apindex-v3/master/sudo-install.sh | bash
-          apindex benchmark_result
+          apindex benchmark_results
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.3
