@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>pendulum demo real-time benchmark</title>
+        <style>
+            {
+                box-sizing: border-box;
+            }
+            /* Set additional styling options for the columns*/
+            .column {
+                float: left;
+                width: 50%;
+            }
+
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+        </style>
+    </head>
+    <body>
+    <h1 align="center">Pendulum demo real-time benchmark</h1>
+    <h2 align="left">Plots</h2>
+    <div class="row">
+        <div class="column">
+          <img src="plots/pendulum_demo_results_plot_latency.svg">
+        </div>
+        <div class="column">
+          <img src="plots/pendulum_demo_results_plot_latency_hist.svg">
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+          <img src="plots/pendulum_demo_results_plot_minflt.svg">
+        </div>
+        <div class="column">
+          <img src="plots/pendulum_demo_results_plot_majflt.svg">
+        </div>
+    </div>
+    <h2 align="left">Results</h2>
+    <div class="row">
+        <div class="column">
+          <iframe src="experiments/pendulum_demo_results_statistics.txt"></iframe>
+        </div>
+        <div class="column">
+          <iframe src="experiments/pendulum_demo_results.txt"></iframe>
+        </div>
+    </div>
+</html>

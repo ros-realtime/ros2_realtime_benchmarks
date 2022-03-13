@@ -1,0 +1,4 @@
+Min latency: 28103
+Max latency: 355837
+Mean latency: 74284.72608333333
+# of samples overrun: 1
