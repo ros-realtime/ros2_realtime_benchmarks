@@ -38,6 +38,6 @@ tool.
 
 ### reference_system
 
-- Results: Coming soon
-- Instructions: Coming soon
+- Results: [reference_system results](https://ros-realtime.github.io/ros2_realtime_benchmarks/benchmark_results/reference_system_benchmarks/)
+- Instructions: [autoware_reference_system README](https://github.com/ros-realtime/reference-system/tree/main/autoware_reference_system)
 - Repository: [https://github.com/ros-realtime/reference-system](https://github.com/ros-realtime/reference-system)
