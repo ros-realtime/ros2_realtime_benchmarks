@@ -1,0 +1,5 @@
+nav:
+  - Home: index.md
+  - Instructions: instructions
+  - Benchmark results: benchmark_results
+  - ...
