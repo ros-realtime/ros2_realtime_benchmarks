@@ -1,4 +1,4 @@
-# Instructions for performance_test real-time benchmark
+# Instructions for performance_test
 
 ## Introduction
 

@@ -1,4 +1,4 @@
-# Instructions for pendulum demo real-time benchmark
+# Instructions for pendulum demo
 
 ## Introduction
 
