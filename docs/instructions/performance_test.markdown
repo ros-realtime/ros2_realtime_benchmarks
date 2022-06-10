@@ -34,24 +34,6 @@ ros2 run performance_report runner \
   --configs ~/performance_test_rt_cfg/runner/run_rt_experiment_batch.yaml
 ```
 
-# Generate the plots
-
-```bash
-ros2 run performance_report plotter \
-  --log-dir perf_logs \
-  --configs ~/performance_test_rt_cfg/plotter/plot_experiment_single.yaml
-
-ros2 run performance_report plotter \
-  --log-dir perf_logs \
-  --configs ~/performance_test_rt_cfg/plotter/plot_experiment_batch_prio90.yaml
-```
-
-```bash
-ros2 run performance_report plotter \
-  --log-dir perf_logs \
-  --configs ~/performance_test_rt_cfg/plotter/plot_experiment_batch_prio0.yaml
-```
-
 ## Generate the reports
 
 ```bash

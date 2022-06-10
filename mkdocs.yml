@@ -1,0 +1,16 @@
+site_name: ROS 2 real-time benchmarks
+site_url: https://ros-realtime.github.io
+site_author: Carlos San Vicente
+repo_url: https://github.com/ros-realtime/ros2_realtime_benchmarks
+theme:
+  name: 'material'
+  features:
+    - navigation.indexes
+    - navigation.tracking
+plugins:
+  - search
+  - awesome-pages
+extra:
+  version:
+    provider: mike
+use_directory_urls: false
