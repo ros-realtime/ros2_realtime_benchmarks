@@ -5,14 +5,14 @@
 <table>
 <thead>
   <tr>
-    <th>![](plots/pendulum_demo_results_plot_latency.svg)</th>
-    <th>![](plots/pendulum_demo_results_plot_latency_hist.svg)</th>
+    <th><img src="plots/pendulum_demo_results_plot_latency.svg"></th>
+    <th><img src="plots/pendulum_demo_results_plot_latency_hist.svg"></th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td>![](plots/pendulum_demo_results_plot_minflt.svg) </td>
-    <td>![](plots/pendulum_demo_results_plot_majflt.svg)</td>
+    <td><img src="plots/pendulum_demo_results_plot_minflt.svg"></td>
+    <td><img src="plots/pendulum_demo_results_plot_majflt.svg"></td>
   </tr>
 </tbody>
 </table>
