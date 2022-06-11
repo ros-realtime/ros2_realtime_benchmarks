@@ -21,13 +21,13 @@ tool.
 
 ### performance_test
 
-- Instructions: [performance_test instructions](instructions/performance_test.markdown)
+- Instructions: [performance_test instructions](instructions/performance_test.md)
 - Repository: [https://gitlab.com/ApexAI/performance_test](https://gitlab.com/ApexAI/performance_test)
 - Real-time benchmarks configurations: [performance_test_rt_cfg](https://github.com/ros-realtime/performance_test_rt_cfg)
 
 ### pendulum_control
 
-- Instructions: [pendulum_control instructions](instructions/pendulum_demo.markdown)
+- Instructions: [pendulum_control instructions](instructions/pendulum_demo.md)
 - Repository: [https://github.com/ros2/demos/tree/master/pendulum_control](https://github.com/ros2/demos/tree/master/pendulum_control)
 
 ### reference_system
