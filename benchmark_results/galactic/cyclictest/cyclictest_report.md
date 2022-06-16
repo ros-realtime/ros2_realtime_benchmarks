@@ -1,6 +1,6 @@
-# Cyclic test control real-time benchmark
+# Cyclictest
 
-## Latency test
+## System IDLE, 1 hour
 
 <table>
 <tbody>

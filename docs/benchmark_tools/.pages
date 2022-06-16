@@ -1,0 +1,6 @@
+nav:
+  - Cyclictest: cyclictest.md
+  - Pendulum control: pendulum_control.md
+  - Performance test: performance_test.md
+  - Reference system: reference_system.md
+  - ...

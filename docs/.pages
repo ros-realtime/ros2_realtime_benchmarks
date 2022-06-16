@@ -1,5 +1,5 @@
 nav:
   - Home: index.md
-  - Instructions: instructions
+  - Benchmark tools: benchmark_tools
   - Benchmark results: benchmark_results
   - ...
