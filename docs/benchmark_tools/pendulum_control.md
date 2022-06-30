@@ -11,7 +11,9 @@ TODO
 
 ## Run the demo
 
+
 Run the pendulum demo with the following settings:
+
 - update period (-u): 1 millisecond
 - maximum heap prefault size for dynamic memory (-d): 200 MB
 - real-time loop iterations (-i): 60000
