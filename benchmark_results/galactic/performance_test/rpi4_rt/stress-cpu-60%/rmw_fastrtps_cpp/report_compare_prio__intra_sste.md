@@ -5,7 +5,7 @@
 
 ## Latency metrics
 
-    <script type="text/javascript">
+<script type="text/javascript">
         (function() {
   const fn = function() {
     Bokeh.safely(function() {
@@ -38,10 +38,10 @@
   if (document.readyState != "loading") fn();
   else document.addEventListener("DOMContentLoaded", fn);
 })();
-    </script>
+</script>
 <div class="bk-root" id="07b50344-0d96-4ad6-9595-3a5e16a2140e" data-root-id="2919"></div>
 
-    <script type="text/javascript">
+<script type="text/javascript">
         (function() {
   const fn = function() {
     Bokeh.safely(function() {
@@ -74,10 +74,10 @@
   if (document.readyState != "loading") fn();
   else document.addEventListener("DOMContentLoaded", fn);
 })();
-    </script>
+</script>
 <div class="bk-root" id="2c8a7a3d-0617-495a-8ab1-66fb275a3541" data-root-id="3079"></div>
 
-    <script type="text/javascript">
+<script type="text/javascript">
         (function() {
   const fn = function() {
     Bokeh.safely(function() {
@@ -110,10 +110,10 @@
   if (document.readyState != "loading") fn();
   else document.addEventListener("DOMContentLoaded", fn);
 })();
-    </script>
+</script>
 <div class="bk-root" id="a3c0fa46-1f56-4288-92f1-27777c5d9ed3" data-root-id="3239"></div>
 
-    <script type="text/javascript">
+<script type="text/javascript">
         (function() {
   const fn = function() {
     Bokeh.safely(function() {
@@ -146,7 +146,7 @@
   if (document.readyState != "loading") fn();
   else document.addEventListener("DOMContentLoaded", fn);
 })();
-    </script>
+</script>
 <div class="bk-root" id="d1e0f988-2e8d-44dc-a1c0-7664af324956" data-root-id="3399"></div>
 
 ## Sample metrics
@@ -155,7 +155,7 @@
 
 ## System metrics
 
-    <script type="text/javascript">
+<script type="text/javascript">
         (function() {
   const fn = function() {
     Bokeh.safely(function() {
@@ -188,10 +188,10 @@
   if (document.readyState != "loading") fn();
   else document.addEventListener("DOMContentLoaded", fn);
 })();
-    </script>
+</script>
 <div class="bk-root" id="9f1484f1-a893-4ac7-8a9b-0b725d8f29ce" data-root-id="3559"></div>
 
-    <script type="text/javascript">
+<script type="text/javascript">
         (function() {
   const fn = function() {
     Bokeh.safely(function() {
@@ -224,10 +224,10 @@
   if (document.readyState != "loading") fn();
   else document.addEventListener("DOMContentLoaded", fn);
 })();
-    </script>
+</script>
 <div class="bk-root" id="7e33fcb0-fbee-4f22-a1a0-1a6bf1c49f98" data-root-id="3719"></div>
 
-    <script type="text/javascript">
+<script type="text/javascript">
         (function() {
   const fn = function() {
     Bokeh.safely(function() {
@@ -260,10 +260,10 @@
   if (document.readyState != "loading") fn();
   else document.addEventListener("DOMContentLoaded", fn);
 })();
-    </script>
+</script>
 <div class="bk-root" id="aade5bd2-06e3-4d86-b958-6046a1591efc" data-root-id="3879"></div>
 
-    <script type="text/javascript">
+<script type="text/javascript">
         (function() {
   const fn = function() {
     Bokeh.safely(function() {
@@ -296,5 +296,5 @@
   if (document.readyState != "loading") fn();
   else document.addEventListener("DOMContentLoaded", fn);
 })();
-    </script>
+</script>
 <div class="bk-root" id="bd87b5ab-fd3b-4e88-a8f5-5069d2fc3284" data-root-id="4039"></div>
