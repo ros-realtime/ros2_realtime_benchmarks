@@ -1,0 +1,2086 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Carlos San Vicente">
+      
+      
+        <link rel="canonical" href="https://ros-realtime.github.io/benchmark_results/galactic/reference_system/rpi4_rt/stress-cpu-60%25/rmw_fastrtps_cpp/memory_and_cpu_usage_summary_report_120s.html">
+      
+      <link rel="icon" href="../../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>Memory and CPU usage report - ROS 2 real-time benchmarks</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#memory-and-cpu-usage-report" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-component="outdated" hidden>
+        <aside class="md-banner md-banner--warning">
+          
+        </aside>
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../../../index.html" title="ROS 2 real-time benchmarks" class="md-header__button md-logo" aria-label="ROS 2 real-time benchmarks" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ROS 2 real-time benchmarks
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Memory and CPU usage report
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ros-realtime/ros2_realtime_benchmarks" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../../index.html" title="ROS 2 real-time benchmarks" class="md-nav__button md-logo" aria-label="ROS 2 real-time benchmarks" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ROS 2 real-time benchmarks
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ros-realtime/ros2_realtime_benchmarks" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../index.html" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Benchmark tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Benchmark tools" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Benchmark tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../benchmark_tools/cyclictest.html" class="md-nav__link">
+        Cyclictest
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../benchmark_tools/pendulum_control.html" class="md-nav__link">
+        Pendulum control
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../benchmark_tools/performance_test.html" class="md-nav__link">
+        Performance test
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../benchmark_tools/reference_system.html" class="md-nav__link">
+        Reference system
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Benchmark results
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Benchmark results" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Benchmark results
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Foxy
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Foxy" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Foxy
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_1" type="checkbox" id="__nav_3_1_1" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_1">
+          Pendulum control
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Pendulum control" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Pendulum control
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_1_1" type="checkbox" id="__nav_3_1_1_1" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_1_1">
+          Rpi4 rt
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Rpi4 rt" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Rpi4 rt
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_1_1_1" type="checkbox" id="__nav_3_1_1_1_1" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_1_1_1">
+          Rmw cyclonedds cpp
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Rmw cyclonedds cpp" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_1_1_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Rmw cyclonedds cpp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../foxy/pendulum_control/rpi4-rt/rmw_cyclonedds_cpp/pendulum_results.html" class="md-nav__link">
+        Pendulum control real-time benchmark
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_1_1_2" type="checkbox" id="__nav_3_1_1_1_2" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_1_1_2">
+          Rmw fastrtps cpp
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Rmw fastrtps cpp" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_1_1_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Rmw fastrtps cpp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../foxy/pendulum_control/rpi4-rt/rmw_fastrtps_cpp/pendulum_results.html" class="md-nav__link">
+        Pendulum control real-time benchmark
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          Galactic
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Galactic" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Galactic
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_1" type="checkbox" id="__nav_3_2_1" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1">
+          Cyclictest
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cyclictest" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Cyclictest
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_1_1" type="checkbox" id="__nav_3_2_1_1" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_1">
+          Idle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Idle" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_2_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Idle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cyclictest/idle/cyclictest_report.html" class="md-nav__link">
+        Cyclictest
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_1_2" type="checkbox" id="__nav_3_2_1_2" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_2">
+          Stress cpu 60%
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Stress cpu 60%" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_2_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Stress cpu 60%
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cyclictest/stress-cpu-60%25/cyclictest_report.html" class="md-nav__link">
+        Cyclictest
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_2" type="checkbox" id="__nav_3_2_2" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2">
+          Pendulum control
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Pendulum control" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Pendulum control
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_2_1" type="checkbox" id="__nav_3_2_2_1" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2_1">
+          Rpi4 rt
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Rpi4 rt" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_2_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Rpi4 rt
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_2_1_1" type="checkbox" id="__nav_3_2_2_1_1" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2_1_1">
+          Idle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Idle" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_2_2_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Idle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_2_1_1_1" type="checkbox" id="__nav_3_2_2_1_1_1" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2_1_1_1">
+          Rmw cyclonedds cpp
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Rmw cyclonedds cpp" data-md-level="6">
+        <label class="md-nav__title" for="__nav_3_2_2_1_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Rmw cyclonedds cpp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../pendulum_control/rpi4-rt/idle/rmw_cyclonedds_cpp/pendulum_results.html" class="md-nav__link">
+        Pendulum control real-time benchmark
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_2_1_2" type="checkbox" id="__nav_3_2_2_1_2" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2_1_2">
+          Stress cpu 60%
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Stress cpu 60%" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_2_2_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Stress cpu 60%
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_2_1_2_1" type="checkbox" id="__nav_3_2_2_1_2_1" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2_1_2_1">
+          Rmw cyclonedds cpp
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Rmw cyclonedds cpp" data-md-level="6">
+        <label class="md-nav__title" for="__nav_3_2_2_1_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Rmw cyclonedds cpp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../pendulum_control/rpi4-rt/stress-cpu-60%25/rmw_cyclonedds_cpp/pendulum_results.html" class="md-nav__link">
+        Pendulum control real-time benchmark
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_3" type="checkbox" id="__nav_3_2_3" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_3">
+          Performance test
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Performance test" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Performance test
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_3_1" type="checkbox" id="__nav_3_2_3_1" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_3_1">
+          Rpi4 rt
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Rpi4 rt" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_2_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Rpi4 rt
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_3_1_1" type="checkbox" id="__nav_3_2_3_1_1" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_3_1_1">
+          Idle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Idle" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_2_3_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Idle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_3_1_1_1" type="checkbox" id="__nav_3_2_3_1_1_1" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_3_1_1_1">
+          Rmw cyclonedds cpp
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Rmw cyclonedds cpp" data-md-level="6">
+        <label class="md-nav__title" for="__nav_3_2_3_1_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Rmw cyclonedds cpp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../performance_test/rpi4_rt/idle/rmw_cyclonedds_cpp/report_compare_com_mean__intra_prio90.html" class="md-nav__link">
+        Report compare com mean  intra prio90
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../performance_test/rpi4_rt/idle/rmw_cyclonedds_cpp/report_compare_prio__intra_sste.html" class="md-nav__link">
+        Report compare prio  intra sste
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../performance_test/rpi4_rt/idle/rmw_cyclonedds_cpp/report_compare_transport__sste_prio90.html" class="md-nav__link">
+        Report compare transport  sste prio90
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_3_1_1_2" type="checkbox" id="__nav_3_2_3_1_1_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_3_1_1_2">
+          Rmw fastrtps cpp
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Rmw fastrtps cpp" data-md-level="6">
+        <label class="md-nav__title" for="__nav_3_2_3_1_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Rmw fastrtps cpp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../performance_test/rpi4_rt/idle/rmw_fastrtps_cpp/report_compare_com_mean__intra_prio90.html" class="md-nav__link">
+        Report compare com mean  intra prio90
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../performance_test/rpi4_rt/idle/rmw_fastrtps_cpp/report_compare_prio__intra_sste.html" class="md-nav__link">
+        Report compare prio  intra sste
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../performance_test/rpi4_rt/idle/rmw_fastrtps_cpp/report_compare_transport__sste_prio90.html" class="md-nav__link">
+        Report compare transport  sste prio90
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_3_1_2" type="checkbox" id="__nav_3_2_3_1_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_3_1_2">
+          Stress cpu 60%
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Stress cpu 60%" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_2_3_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Stress cpu 60%
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_3_1_2_1" type="checkbox" id="__nav_3_2_3_1_2_1" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_3_1_2_1">
+          Rmw cyclonedds cpp
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Rmw cyclonedds cpp" data-md-level="6">
+        <label class="md-nav__title" for="__nav_3_2_3_1_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Rmw cyclonedds cpp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../performance_test/rpi4_rt/stress-cpu-60%25/rmw_cyclonedds_cpp/report_compare_com_mean__intra_prio90.html" class="md-nav__link">
+        Report compare com mean  intra prio90
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../performance_test/rpi4_rt/stress-cpu-60%25/rmw_cyclonedds_cpp/report_compare_prio__intra_sste.html" class="md-nav__link">
+        Report compare prio  intra sste
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../performance_test/rpi4_rt/stress-cpu-60%25/rmw_cyclonedds_cpp/report_compare_transport__sste_prio90.html" class="md-nav__link">
+        Report compare transport  sste prio90
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_3_1_2_2" type="checkbox" id="__nav_3_2_3_1_2_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_3_1_2_2">
+          Rmw fastrtps cpp
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Rmw fastrtps cpp" data-md-level="6">
+        <label class="md-nav__title" for="__nav_3_2_3_1_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Rmw fastrtps cpp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../performance_test/rpi4_rt/stress-cpu-60%25/rmw_fastrtps_cpp/report_compare_com_mean__intra_prio90.html" class="md-nav__link">
+        Report compare com mean  intra prio90
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../performance_test/rpi4_rt/stress-cpu-60%25/rmw_fastrtps_cpp/report_compare_prio__intra_sste.html" class="md-nav__link">
+        Report compare prio  intra sste
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../performance_test/rpi4_rt/stress-cpu-60%25/rmw_fastrtps_cpp/report_compare_transport__sste_prio90.html" class="md-nav__link">
+        Report compare transport  sste prio90
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_4" type="checkbox" id="__nav_3_2_4" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_4">
+          Reference system
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Reference system" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Reference system
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_4_1" type="checkbox" id="__nav_3_2_4_1" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_4_1">
+          Rpi4 rt
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Rpi4 rt" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_2_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Rpi4 rt
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_4_1_1" type="checkbox" id="__nav_3_2_4_1_1" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_4_1_1">
+          Idle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Idle" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_2_4_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Idle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_4_1_1_1" type="checkbox" id="__nav_3_2_4_1_1_1" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_4_1_1_1">
+          Rmw cyclone dds
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Rmw cyclone dds" data-md-level="6">
+        <label class="md-nav__title" for="__nav_3_2_4_1_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Rmw cyclone dds
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../idle/rmw_cyclone_dds/executor_kpi_summary_report_120s.html" class="md-nav__link">
+        Key performance indicator report
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../idle/rmw_cyclone_dds/memory_and_cpu_usage_summary_report_120s.html" class="md-nav__link">
+        Memory and CPU usage report
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_4_1_1_2" type="checkbox" id="__nav_3_2_4_1_1_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_4_1_1_2">
+          Rmw fastrtps cpp
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Rmw fastrtps cpp" data-md-level="6">
+        <label class="md-nav__title" for="__nav_3_2_4_1_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Rmw fastrtps cpp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../idle/rmw_fastrtps_cpp/executor_kpi_summary_report_120s.html" class="md-nav__link">
+        Key performance indicator report
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../idle/rmw_fastrtps_cpp/memory_and_cpu_usage_summary_report_120s.html" class="md-nav__link">
+        Memory and CPU usage report
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_4_1_2" type="checkbox" id="__nav_3_2_4_1_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_4_1_2">
+          Stress cpu 60%
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Stress cpu 60%" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_2_4_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Stress cpu 60%
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_4_1_2_1" type="checkbox" id="__nav_3_2_4_1_2_1" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_4_1_2_1">
+          Rmw cyclone dds
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Rmw cyclone dds" data-md-level="6">
+        <label class="md-nav__title" for="__nav_3_2_4_1_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Rmw cyclone dds
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rmw_cyclone_dds/executor_kpi_summary_report_120s.html" class="md-nav__link">
+        Key performance indicator report
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rmw_cyclone_dds/memory_and_cpu_usage_summary_report_120s.html" class="md-nav__link">
+        Memory and CPU usage report
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_4_1_2_2" type="checkbox" id="__nav_3_2_4_1_2_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_4_1_2_2">
+          Rmw fastrtps cpp
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Rmw fastrtps cpp" data-md-level="6">
+        <label class="md-nav__title" for="__nav_3_2_4_1_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Rmw fastrtps cpp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="executor_kpi_summary_report_120s.html" class="md-nav__link">
+        Key performance indicator report
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="memory_and_cpu_usage_summary_report_120s.html" class="md-nav__link md-nav__link--active">
+        Memory and CPU usage report
+      </a>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/ros-realtime/ros2_realtime_benchmarks/edit/master/docs/benchmark_results/galactic/reference_system/rpi4_rt/stress-cpu-60%/rmw_fastrtps_cpp/memory_and_cpu_usage_summary_report_120s.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="memory-and-cpu-usage-report">Memory and CPU usage report</h1>
+<script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.4.3.min.js"></script>
+<script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-2.4.3.min.js"></script>
+
+<script type="text/javascript">
+        (function() {
+  const fn = function() {
+    Bokeh.safely(function() {
+      (function(root) {
+        function embed_document(root) {
+        const docs_json = '{"8e69844f-1628-4763-b540-9aa871d52821":{"defs":[],"roots":{"references":[{"attributes":{"line_alpha":{"value":0.2},"line_width":{"value":2},"x0":{"field":"x"},"x1":{"field":"x"},"y0":{"field":"box_top"},"y1":{"field":"high"}},"id":"3337","type":"Segment"},{"attributes":{"line_width":{"value":2},"x0":{"field":"x"},"x1":{"field":"x"},"y0":{"field":"box_top"},"y1":{"field":"high"}},"id":"3399","type":"Segment"},{"attributes":{"coordinates":null,"group":null,"text":"Virtual Memory Usage Over Time 120s","text_font_size":"22px"},"id":"3426","type":"Title"},{"attributes":{"axis":{"id":"3307"},"coordinates":null,"group":null,"ticker":null},"id":"3309","type":"Grid"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"field":"x","transform":{"id":"3295"}},"hatch_alpha":{"value":0.1},"line_alpha":{"value":0.1},"line_width":{"value":2},"marker":{"value":"dash"},"size":{"value":25},"x":{"field":"x"},"y":{"field":"low"}},"id":"3354","type":"Scatter"},{"attributes":{"bottom":{"field":"box_bottom"},"fill_color":{"field":"x","transform":{"id":"3295"}},"top":{"field":"box_top"},"width":{"value":0.2},"x":{"field":"x"}},"id":"3405","type":"VBar"},{"attributes":{"coordinates":null,"data_source":{"id":"3293"},"glyph":{"id":"3411"},"group":null,"hover_glyph":null,"muted_glyph":{"id":"3413"},"nonselection_glyph":{"id":"3412"},"view":{"id":"3415"}},"id":"3414","type":"GlyphRenderer"},{"attributes":{},"id":"3761","type":"UnionRenderers"},{"attributes":{"source":{"id":"3292"}},"id":"3339","type":"CDSView"},{"attributes":{"factors":[["rmw_cyclonedds_cpp","autoware_default_cbg"],["rmw_cyclonedds_cpp","autoware_default_multithreaded"],["rmw_cyclonedds_cpp","autoware_default_prioritized"],["rmw_cyclonedds_cpp","autoware_default_singlethreaded"],["rmw_cyclonedds_cpp","autoware_default_staticsinglethreaded"]],"range_padding":0.1},"id":"3424","type":"FactorRange"},{"attributes":{},"id":"3442","type":"PanTool"},{"attributes":{},"id":"3762","type":"Selection"},{"attributes":{"axis":{"id":"3371"},"coordinates":null,"group":null,"ticker":null},"id":"3373","type":"Grid"},{"attributes":{},"id":"3436","type":"CategoricalTicker"},{"attributes":{"bottom":{"field":"box_bottom"},"fill_alpha":{"value":0.2},"fill_color":{"field":"x","transform":{"id":"3295"}},"hatch_alpha":{"value":0.2},"line_alpha":{"value":0.2},"top":{"field":"box_top"},"width":{"value":0.2},"x":{"field":"x"}},"id":"3343","type":"VBar"},{"attributes":{},"id":"3431","type":"CategoricalScale"},{"attributes":{"bottom":{"field":"box_bottom"},"fill_alpha":{"value":0.2},"fill_color":{"field":"x","transform":{"id":"3295"}},"hatch_alpha":{"value":0.2},"line_alpha":{"value":0.2},"top":{"field":"box_top"},"width":{"value":0.2},"x":{"field":"x"}},"id":"3407","type":"VBar"},{"attributes":{},"id":"3319","type":"HelpTool"},{"attributes":{"tools":[{"id":"3378"},{"id":"3379"},{"id":"3380"},{"id":"3381"},{"id":"3382"},{"id":"3383"},{"id":"3422"}]},"id":"3385","type":"Toolbar"},{"attributes":{"source":{"id":"3293"}},"id":"3397","type":"CDSView"},{"attributes":{"coordinates":null,"group":null,"text":"CPU Usage Over Time 120s","text_font_size":"22px"},"id":"3298","type":"Title"},{"attributes":{"start":0},"id":"3429","type":"DataRange1d"},{"attributes":{"coordinates":null,"data_source":{"id":"3292"},"glyph":{"id":"3347"},"group":null,"hover_glyph":null,"muted_glyph":{"id":"3349"},"nonselection_glyph":{"id":"3348"},"view":{"id":"3351"}},"id":"3350","type":"GlyphRenderer"},{"attributes":{"fill_alpha":{"value":0.2},"fill_color":{"field":"x","transform":{"id":"3295"}},"hatch_alpha":{"value":0.2},"line_alpha":{"value":0.2},"line_width":{"value":2},"marker":{"value":"dash"},"size":{"value":25},"x":{"field":"x"},"y":{"field":"low"}},"id":"3419","type":"Scatter"},{"attributes":{},"id":"3367","type":"CategoricalScale"},{"attributes":{"source":{"id":"3292"}},"id":"3333","type":"CDSView"},{"attributes":{"below":[{"id":"3371"}],"center":[{"id":"3373"},{"id":"3377"}],"height":800,"left":[{"id":"3374"}],"margin":[10,10,10,10],"renderers":[{"id":"3396"},{"id":"3402"},{"id":"3408"},{"id":"3414"},{"id":"3420"}],"sizing_mode":"scale_width","title":{"id":"3362"},"toolbar":{"id":"3385"},"width":1600,"x_range":{"id":"3360"},"x_scale":{"id":"3367"},"y_range":{"id":"3365"},"y_scale":{"id":"3369"}},"id":"3361","subtype":"Figure","type":"Plot"},{"attributes":{"end":1,"factors":["rmw_cyclonedds_cpp"],"palette":["#00204C"]},"id":"3295","type":"CategoricalColorMapper"},{"attributes":{"line_alpha":{"value":0.1},"line_width":{"value":2},"x0":{"field":"x"},"x1":{"field":"x"},"y0":{"field":"box_top"},"y1":{"field":"high"}},"id":"3400","type":"Segment"},{"attributes":{"line_width":{"value":2},"x0":{"field":"x"},"x1":{"field":"x"},"y0":{"field":"box_bottom"},"y1":{"field":"low"}},"id":"3393","type":"Segment"},{"attributes":{"bottom_units":"screen","coordinates":null,"fill_alpha":0.5,"fill_color":"lightgrey","group":null,"left_units":"screen","level":"overlay","line_alpha":1.0,"line_color":"black","line_dash":[4,4],"line_width":2,"right_units":"screen","syncable":false,"top_units":"screen"},"id":"3320","type":"BoxAnnotation"},{"attributes":{},"id":"3308","type":"CategoricalTicker"},{"attributes":{"line_alpha":{"value":0.1},"line_width":{"value":2},"x0":{"field":"x"},"x1":{"field":"x"},"y0":{"field":"box_bottom"},"y1":{"field":"low"}},"id":"3330","type":"Segment"},{"attributes":{"line_alpha":{"value":0.2},"line_width":{"value":2},"x0":{"field":"x"},"x1":{"field":"x"},"y0":{"field":"box_top"},"y1":{"field":"high"}},"id":"3401","type":"Segment"},{"attributes":{},"id":"3433","type":"LinearScale"},{"attributes":{"factors":[["rmw_cyclonedds_cpp","autoware_default_cbg"],["rmw_cyclonedds_cpp","autoware_default_multithreaded"],["rmw_cyclonedds_cpp","autoware_default_prioritized"],["rmw_cyclonedds_cpp","autoware_default_singlethreaded"],["rmw_cyclonedds_cpp","autoware_default_staticsinglethreaded"]],"range_padding":0.1},"id":"3296","type":"FactorRange"},{"attributes":{},"id":"3369","type":"LinearScale"},{"attributes":{"line_alpha":{"value":0.2},"line_width":{"value":2},"x0":{"field":"x"},"x1":{"field":"x"},"y0":{"field":"box_bottom"},"y1":{"field":"low"}},"id":"3395","type":"Segment"},{"attributes":{"source":{"id":"3292"}},"id":"3357","type":"CDSView"},{"attributes":{"axis":{"id":"3310"},"coordinates":null,"dimension":1,"group":null,"ticker":null},"id":"3313","type":"Grid"},{"attributes":{"line_alpha":{"value":0.1},"line_width":{"value":2},"x0":{"field":"x"},"x1":{"field":"x"},"y0":{"field":"box_bottom"},"y1":{"field":"low"}},"id":"3394","type":"Segment"},{"attributes":{},"id":"3315","type":"WheelZoomTool"},{"attributes":{"coordinates":null,"data_source":{"id":"3293"},"glyph":{"id":"3393"},"group":null,"hover_glyph":null,"muted_glyph":{"id":"3395"},"nonselection_glyph":{"id":"3394"},"view":{"id":"3397"}},"id":"3396","type":"GlyphRenderer"},{"attributes":{"callback":null,"tooltips":[["Benchmark","@{exe} [@{rmw}]"],["Average CPU (%)","@{mean}{0.00}"],["Minimum CPU (%)","@{low}{0.00}"],["Maximum CPU (%)","@{high}{0.00}"]]},"id":"3358","type":"HoverTool"},{"attributes":{"fill_alpha":{"value":0.2},"fill_color":{"field":"x","transform":{"id":"3295"}},"hatch_alpha":{"value":0.2},"line_alpha":{"value":0.2},"line_width":{"value":2},"marker":{"value":"dash"},"size":{"value":25},"x":{"field":"x"},"y":{"field":"high"}},"id":"3413","type":"Scatter"},{"attributes":{"line_alpha":{"value":0.2},"line_width":{"value":2},"x0":{"field":"x"},"x1":{"field":"x"},"y0":{"field":"box_bottom"},"y1":{"field":"low"}},"id":"3331","type":"Segment"},{"attributes":{"source":{"id":"3293"}},"id":"3421","type":"CDSView"},{"attributes":{"axis_label":"Virtual Memory Usage (MB)","axis_label_text_font_size":"20px","coordinates":null,"formatter":{"id":"3756"},"group":null,"major_label_policy":{"id":"3757"},"major_label_text_font_size":"14px","ticker":{"id":"3439"}},"id":"3438","type":"LinearAxis"},{"attributes":{},"id":"3379","type":"WheelZoomTool"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"field":"x","transform":{"id":"3295"}},"hatch_alpha":{"value":0.1},"line_alpha":{"value":0.1},"line_width":{"value":2},"marker":{"value":"dash"},"size":{"value":25},"x":{"field":"x"},"y":{"field":"low"}},"id":"3418","type":"Scatter"},{"attributes":{},"id":"3445","type":"SaveTool"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"field":"x","transform":{"id":"3295"}},"hatch_alpha":{"value":0.1},"line_alpha":{"value":0.1},"line_width":{"value":2},"marker":{"value":"dash"},"size":{"value":25},"x":{"field":"x"},"y":{"field":"high"}},"id":"3348","type":"Scatter"},{"attributes":{"bottom":{"field":"box_bottom"},"fill_alpha":{"value":0.1},"fill_color":{"field":"x","transform":{"id":"3295"}},"hatch_alpha":{"value":0.1},"line_alpha":{"value":0.1},"top":{"field":"box_top"},"width":{"value":0.2},"x":{"field":"x"}},"id":"3342","type":"VBar"},{"attributes":{"coordinates":null,"data_source":{"id":"3292"},"glyph":{"id":"3329"},"group":null,"hover_glyph":null,"muted_glyph":{"id":"3331"},"nonselection_glyph":{"id":"3330"},"view":{"id":"3333"}},"id":"3332","type":"GlyphRenderer"},{"attributes":{"bottom_units":"screen","coordinates":null,"fill_alpha":0.5,"fill_color":"lightgrey","group":null,"left_units":"screen","level":"overlay","line_alpha":1.0,"line_color":"black","line_dash":[4,4],"line_width":2,"right_units":"screen","syncable":false,"top_units":"screen"},"id":"3384","type":"BoxAnnotation"},{"attributes":{"bottom":{"field":"box_bottom"},"fill_alpha":{"value":0.1},"fill_color":{"field":"x","transform":{"id":"3295"}},"hatch_alpha":{"value":0.1},"line_alpha":{"value":0.1},"top":{"field":"box_top"},"width":{"value":0.2},"x":{"field":"x"}},"id":"3406","type":"VBar"},{"attributes":{},"id":"3382","type":"ResetTool"},{"attributes":{"fill_color":{"field":"x","transform":{"id":"3295"}},"line_width":{"value":2},"marker":{"value":"dash"},"size":{"value":25},"x":{"field":"x"},"y":{"field":"high"}},"id":"3347","type":"Scatter"},{"attributes":{"data":{"box_bottom":{"__ndarray__":"0LxZhwTfj0B5fimBilKLQBCBxKW3pY9AwYpBUwjWhEAZYQ5MideEQA==","dtype":"float64","order":"little","shape":[5]},"box_top":{"__ndarray__":"qL32Hy5rkECfZmQlJ16MQFLeK24+hZBAjQyhi8FjhUBn7SJnqGGFQA==","dtype":"float64","order":"little","shape":[5]},"exe":["autoware_default_cbg","autoware_default_multithreaded","autoware_default_prioritized","autoware_default_singlethreaded","autoware_default_staticsinglethreaded"],"high":{"__ndarray__":"+FPjpZsukEAtsp3vp9yLQHnpJjGILpBApHA9CtcdhUAv3SQGgR2FQA==","dtype":"float64","order":"little","shape":[5]},"index":[3,11,19,15,7],"low":{"__ndarray__":"qvHSTWIQAECq8dJNYhAAQKrx0k1iEABAqvHSTWIQAECq8dJNYhAAQA==","dtype":"float64","order":"little","shape":[5]},"mean":{"__ndarray__":"CM7RMVgtkECM8kbTWNiLQG0PhyANLJBAp0tx7+QchUBAp5jZmByFQA==","dtype":"float64","order":"little","shape":[5]},"rmw":["rmw_cyclonedds_cpp","rmw_cyclonedds_cpp","rmw_cyclonedds_cpp","rmw_cyclonedds_cpp","rmw_cyclonedds_cpp"],"std_dev":{"__ndarray__":"8c93EvfqLkBZgq5DyrkwQE+5M2lTTDZAljnwCye3IUC1iZFi40MhQA==","dtype":"float64","order":"little","shape":[5]},"type":["virtual","virtual","virtual","virtual","virtual"],"x":[["rmw_cyclonedds_cpp","autoware_default_cbg"],["rmw_cyclonedds_cpp","autoware_default_multithreaded"],["rmw_cyclonedds_cpp","autoware_default_prioritized"],["rmw_cyclonedds_cpp","autoware_default_singlethreaded"],["rmw_cyclonedds_cpp","autoware_default_staticsinglethreaded"]]},"selected":{"id":"3762"},"selection_policy":{"id":"3761"}},"id":"3294","type":"ColumnDataSource"},{"attributes":{"line_width":{"value":2},"x0":{"field":"x"},"x1":{"field":"x"},"y0":{"field":"box_bottom"},"y1":{"field":"low"}},"id":"3457","type":"Segment"},{"attributes":{"callback":null,"tooltips":[["Benchmark","@{exe} [@{rmw}]"],["Average Real Memory Usage (MB)","@{mean}{0.00}"],["Minimum Real Memory Usage (MB)","@{low}{0.00}"],["Maximum Real Memory Usage (MB)","@{high}{0.00}"]]},"id":"3422","type":"HoverTool"},{"attributes":{},"id":"3439","type":"BasicTicker"},{"attributes":{"autosize_mode":"fit_viewport","columns":[{"id":"3488"},{"id":"3489"},{"id":"3490"},{"id":"3491"},{"id":"3492"},{"id":"3493"}],"height":250,"margin":[0,10,10,10],"source":{"id":"3494"},"view":{"id":"3497"},"width":1250},"id":"3495","type":"DataTable"},{"attributes":{"axis":{"id":"3374"},"coordinates":null,"dimension":1,"group":null,"ticker":null},"id":"3377","type":"Grid"},{"attributes":{},"id":"3622","type":"BasicTickFormatter"},{"attributes":{},"id":"3443","type":"WheelZoomTool"},{"attributes":{"tools":[{"id":"3314"},{"id":"3315"},{"id":"3316"},{"id":"3317"},{"id":"3318"},{"id":"3319"},{"id":"3358"}]},"id":"3321","type":"Toolbar"},{"attributes":{"source":{"id":"3292"}},"id":"3345","type":"CDSView"},{"attributes":{"source":{"id":"3293"}},"id":"3403","type":"CDSView"},{"attributes":{},"id":"3623","type":"AllLabels"},{"attributes":{"axis_label":"Executors (with RMW)","axis_label_text_font_size":"20px","coordinates":null,"formatter":{"id":"3759"},"group":null,"group_text_font_size":"15px","major_label_orientation":0.19634954084936207,"major_label_policy":{"id":"3760"},"major_label_text_font_size":"14px","ticker":{"id":"3436"}},"id":"3435","type":"CategoricalAxis"},{"attributes":{"coordinates":null,"group":null,"text":"Real Memory Usage Over Time 120s","text_font_size":"22px"},"id":"3362","type":"Title"},{"attributes":{},"id":"3375","type":"BasicTicker"},{"attributes":{},"id":"3625","type":"CategoricalTickFormatter"},{"attributes":{"axis":{"id":"3435"},"coordinates":null,"group":null,"ticker":null},"id":"3437","type":"Grid"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"field":"x","transform":{"id":"3295"}},"hatch_alpha":{"value":0.1},"line_alpha":{"value":0.1},"line_width":{"value":2},"marker":{"value":"dash"},"size":{"value":25},"x":{"field":"x"},"y":{"field":"high"}},"id":"3412","type":"Scatter"},{"attributes":{},"id":"3626","type":"AllLabels"},{"attributes":{},"id":"3311","type":"BasicTicker"},{"attributes":{"coordinates":null,"data_source":{"id":"3293"},"glyph":{"id":"3405"},"group":null,"hover_glyph":null,"muted_glyph":{"id":"3407"},"nonselection_glyph":{"id":"3406"},"view":{"id":"3409"}},"id":"3408","type":"GlyphRenderer"},{"attributes":{"axis_label":"Real Memory Usage (MB)","axis_label_text_font_size":"20px","coordinates":null,"formatter":{"id":"3622"},"group":null,"major_label_policy":{"id":"3623"},"major_label_text_font_size":"14px","ticker":{"id":"3375"}},"id":"3374","type":"LinearAxis"},{"attributes":{},"id":"3314","type":"PanTool"},{"attributes":{"source":{"id":"3293"}},"id":"3415","type":"CDSView"},{"attributes":{},"id":"3383","type":"HelpTool"},{"attributes":{"data":{"box_bottom":{"__ndarray__":"hetRuB41U0AAAAAAAIBcQHsUrkfhqlRA16NwPQqXUUCPwvUoXJ9QQA==","dtype":"float64","order":"little","shape":[5]},"box_top":{"__ndarray__":"16NwPQpvY0BSuB6F6ylpQHE9Ctej+GVA4XoUrkfhXkAzMzMzM4NfQA==","dtype":"float64","order":"little","shape":[5]},"exe":["autoware_default_cbg","autoware_default_multithreaded","autoware_default_prioritized","autoware_default_singlethreaded","autoware_default_staticsinglethreaded"],"high":{"__ndarray__":"zczMzMxEckDNzMzMzER2QDMzMzMzq3pAZmZmZmaWY0AAAAAAAGBnQA==","dtype":"float64","order":"little","shape":[5]},"index":[1,9,17,13,5],"low":{"__ndarray__":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==","dtype":"float64","order":"little","shape":[5]},"mean":{"__ndarray__":"mpmZmZkJXUCF61G4HrVjQNejcD0KJ2BAXI/C9Sg8WEDhehSuRxFYQA==","dtype":"float64","order":"little","shape":[5]},"rmw":["rmw_cyclonedds_cpp","rmw_cyclonedds_cpp","rmw_cyclonedds_cpp","rmw_cyclonedds_cpp","rmw_cyclonedds_cpp"],"std_dev":{"__ndarray__":"KVyPwvWoQ0AzMzMzM9NFQGZmZmZmRkdAFK5H4XqUOkBI4XoUrsc9QA==","dtype":"float64","order":"little","shape":[5]},"type":["cpu","cpu","cpu","cpu","cpu"]},"selected":{"id":"3519"},"selection_policy":{"id":"3518"}},"id":"3494","type":"ColumnDataSource"},{"attributes":{},"id":"3318","type":"ResetTool"},{"attributes":{"line_alpha":{"value":0.1},"line_width":{"value":2},"x0":{"field":"x"},"x1":{"field":"x"},"y0":{"field":"box_top"},"y1":{"field":"high"}},"id":"3336","type":"Segment"},{"attributes":{"axis_label":"CPU (%)","axis_label_text_font_size":"20px","coordinates":null,"formatter":{"id":"3536"},"group":null,"major_label_policy":{"id":"3537"},"major_label_text_font_size":"14px","ticker":{"id":"3311"}},"id":"3310","type":"LinearAxis"},{"attributes":{"factors":[["rmw_cyclonedds_cpp","autoware_default_cbg"],["rmw_cyclonedds_cpp","autoware_default_multithreaded"],["rmw_cyclonedds_cpp","autoware_default_prioritized"],["rmw_cyclonedds_cpp","autoware_default_singlethreaded"],["rmw_cyclonedds_cpp","autoware_default_staticsinglethreaded"]],"range_padding":0.1},"id":"3360","type":"FactorRange"},{"attributes":{"fill_alpha":{"value":0.2},"fill_color":{"field":"x","transform":{"id":"3295"}},"hatch_alpha":{"value":0.2},"line_alpha":{"value":0.2},"line_width":{"value":2},"marker":{"value":"dash"},"size":{"value":25},"x":{"field":"x"},"y":{"field":"high"}},"id":"3349","type":"Scatter"},{"attributes":{"coordinates":null,"data_source":{"id":"3292"},"glyph":{"id":"3335"},"group":null,"hover_glyph":null,"muted_glyph":{"id":"3337"},"nonselection_glyph":{"id":"3336"},"view":{"id":"3339"}},"id":"3338","type":"GlyphRenderer"},{"attributes":{"fill_color":{"field":"x","transform":{"id":"3295"}},"line_width":{"value":2},"marker":{"value":"dash"},"size":{"value":25},"x":{"field":"x"},"y":{"field":"low"}},"id":"3417","type":"Scatter"},{"attributes":{"start":0},"id":"3301","type":"DataRange1d"},{"attributes":{"coordinates":null,"data_source":{"id":"3292"},"glyph":{"id":"3341"},"group":null,"hover_glyph":null,"muted_glyph":{"id":"3343"},"nonselection_glyph":{"id":"3342"},"view":{"id":"3345"}},"id":"3344","type":"GlyphRenderer"},{"attributes":{"axis_label":"Executors (with RMW)","axis_label_text_font_size":"20px","coordinates":null,"formatter":{"id":"3625"},"group":null,"group_text_font_size":"15px","major_label_orientation":0.19634954084936207,"major_label_policy":{"id":"3626"},"major_label_text_font_size":"14px","ticker":{"id":"3372"}},"id":"3371","type":"CategoricalAxis"},{"attributes":{"fill_alpha":{"value":0.2},"fill_color":{"field":"x","transform":{"id":"3295"}},"hatch_alpha":{"value":0.2},"line_alpha":{"value":0.2},"line_width":{"value":2},"marker":{"value":"dash"},"size":{"value":25},"x":{"field":"x"},"y":{"field":"low"}},"id":"3355","type":"Scatter"},{"attributes":{"coordinates":null,"data_source":{"id":"3293"},"glyph":{"id":"3417"},"group":null,"hover_glyph":null,"muted_glyph":{"id":"3419"},"nonselection_glyph":{"id":"3418"},"view":{"id":"3421"}},"id":"3420","type":"GlyphRenderer"},{"attributes":{"bottom":{"field":"box_bottom"},"fill_color":{"field":"x","transform":{"id":"3295"}},"top":{"field":"box_top"},"width":{"value":0.2},"x":{"field":"x"}},"id":"3341","type":"VBar"},{"attributes":{"start":0},"id":"3365","type":"DataRange1d"},{"attributes":{"line_width":{"value":2},"x0":{"field":"x"},"x1":{"field":"x"},"y0":{"field":"box_top"},"y1":{"field":"high"}},"id":"3335","type":"Segment"},{"attributes":{"coordinates":null,"data_source":{"id":"3293"},"glyph":{"id":"3399"},"group":null,"hover_glyph":null,"muted_glyph":{"id":"3401"},"nonselection_glyph":{"id":"3400"},"view":{"id":"3403"}},"id":"3402","type":"GlyphRenderer"},{"attributes":{},"id":"3627","type":"UnionRenderers"},{"attributes":{"axis":{"id":"3438"},"coordinates":null,"dimension":1,"group":null,"ticker":null},"id":"3441","type":"Grid"},{"attributes":{"overlay":{"id":"3448"}},"id":"3444","type":"BoxZoomTool"},{"attributes":{},"id":"3628","type":"Selection"},{"attributes":{},"id":"3305","type":"LinearScale"},{"attributes":{"line_width":{"value":2},"x0":{"field":"x"},"x1":{"field":"x"},"y0":{"field":"box_bottom"},"y1":{"field":"low"}},"id":"3329","type":"Segment"},{"attributes":{"fill_color":{"field":"x","transform":{"id":"3295"}},"line_width":{"value":2},"marker":{"value":"dash"},"size":{"value":25},"x":{"field":"x"},"y":{"field":"low"}},"id":"3353","type":"Scatter"},{"attributes":{"overlay":{"id":"3384"}},"id":"3380","type":"BoxZoomTool"},{"attributes":{"source":{"id":"3292"}},"id":"3351","type":"CDSView"},{"attributes":{},"id":"3317","type":"SaveTool"},{"attributes":{"fill_color":{"field":"x","transform":{"id":"3295"}},"line_width":{"value":2},"marker":{"value":"dash"},"size":{"value":25},"x":{"field":"x"},"y":{"field":"high"}},"id":"3411","type":"Scatter"},{"attributes":{"axis_label":"Executors (with RMW)","axis_label_text_font_size":"20px","coordinates":null,"formatter":{"id":"3539"},"group":null,"group_text_font_size":"15px","major_label_orientation":0.19634954084936207,"major_label_policy":{"id":"3540"},"major_label_text_font_size":"14px","ticker":{"id":"3308"}},"id":"3307","type":"CategoricalAxis"},{"attributes":{"source":{"id":"3293"}},"id":"3409","type":"CDSView"},{"attributes":{},"id":"3303","type":"CategoricalScale"},{"attributes":{},"id":"3580","type":"UnionRenderers"},{"attributes":{},"id":"3381","type":"SaveTool"},{"attributes":{"overlay":{"id":"3320"}},"id":"3316","type":"BoxZoomTool"},{"attributes":{},"id":"3581","type":"Selection"},{"attributes":{},"id":"3372","type":"CategoricalTicker"},{"attributes":{"coordinates":null,"data_source":{"id":"3292"},"glyph":{"id":"3353"},"group":null,"hover_glyph":null,"muted_glyph":{"id":"3355"},"nonselection_glyph":{"id":"3354"},"view":{"id":"3357"}},"id":"3356","type":"GlyphRenderer"},{"attributes":{"below":[{"id":"3435"}],"center":[{"id":"3437"},{"id":"3441"}],"height":800,"left":[{"id":"3438"}],"margin":[10,10,10,10],"renderers":[{"id":"3460"},{"id":"3466"},{"id":"3472"},{"id":"3478"},{"id":"3484"}],"sizing_mode":"scale_width","title":{"id":"3426"},"toolbar":{"id":"3449"},"width":1600,"x_range":{"id":"3424"},"x_scale":{"id":"3431"},"y_range":{"id":"3429"},"y_scale":{"id":"3433"}},"id":"3425","subtype":"Figure","type":"Plot"},{"attributes":{},"id":"3378","type":"PanTool"},{"attributes":{},"id":"3446","type":"ResetTool"},{"attributes":{},"id":"3514","type":"StringFormatter"},{"attributes":{"bottom":{"field":"box_bottom"},"fill_color":{"field":"x","transform":{"id":"3295"}},"top":{"field":"box_top"},"width":{"value":0.2},"x":{"field":"x"}},"id":"3469","type":"VBar"},{"attributes":{},"id":"3519","type":"Selection"},{"attributes":{},"id":"3508","type":"StringFormatter"},{"attributes":{"editor":{"id":"3511"},"field":"low","formatter":{"id":"3510"},"title":"Min"},"id":"3490","type":"TableColumn"},{"attributes":{},"id":"3690","type":"UnionRenderers"},{"attributes":{"tools":[{"id":"3442"},{"id":"3443"},{"id":"3444"},{"id":"3445"},{"id":"3446"},{"id":"3447"},{"id":"3486"}]},"id":"3449","type":"Toolbar"},{"attributes":{},"id":"3517","type":"StringEditor"},{"attributes":{},"id":"3691","type":"Selection"},{"attributes":{"coordinates":null,"data_source":{"id":"3294"},"glyph":{"id":"3463"},"group":null,"hover_glyph":null,"muted_glyph":{"id":"3465"},"nonselection_glyph":{"id":"3464"},"view":{"id":"3467"}},"id":"3466","type":"GlyphRenderer"},{"attributes":{"line_alpha":{"value":0.2},"line_width":{"value":2},"x0":{"field":"x"},"x1":{"field":"x"},"y0":{"field":"box_bottom"},"y1":{"field":"low"}},"id":"3459","type":"Segment"},{"attributes":{"bottom":{"field":"box_bottom"},"fill_alpha":{"value":0.2},"fill_color":{"field":"x","transform":{"id":"3295"}},"hatch_alpha":{"value":0.2},"line_alpha":{"value":0.2},"top":{"field":"box_top"},"width":{"value":0.2},"x":{"field":"x"}},"id":"3471","type":"VBar"},{"attributes":{"fill_alpha":{"value":0.2},"fill_color":{"field":"x","transform":{"id":"3295"}},"hatch_alpha":{"value":0.2},"line_alpha":{"value":0.2},"line_width":{"value":2},"marker":{"value":"dash"},"size":{"value":25},"x":{"field":"x"},"y":{"field":"high"}},"id":"3477","type":"Scatter"},{"attributes":{"editor":{"id":"3515"},"field":"high","formatter":{"id":"3514"},"title":"Max"},"id":"3492","type":"TableColumn"},{"attributes":{},"id":"3515","type":"StringEditor"},{"attributes":{"editor":{"id":"3507"},"field":"exe","formatter":{"id":"3506"},"title":"Benchmark"},"id":"3488","type":"TableColumn"},{"attributes":{},"id":"3537","type":"AllLabels"},{"attributes":{},"id":"3512","type":"StringFormatter"},{"attributes":{},"id":"3511","type":"StringEditor"},{"attributes":{"source":{"id":"3294"}},"id":"3479","type":"CDSView"},{"attributes":{"source":{"id":"3294"}},"id":"3467","type":"CDSView"},{"attributes":{},"id":"3507","type":"StringEditor"},{"attributes":{},"id":"3518","type":"UnionRenderers"},{"attributes":{},"id":"3542","type":"Selection"},{"attributes":{},"id":"3509","type":"StringEditor"},{"attributes":{"coordinates":null,"data_source":{"id":"3294"},"glyph":{"id":"3469"},"group":null,"hover_glyph":null,"muted_glyph":{"id":"3471"},"nonselection_glyph":{"id":"3470"},"view":{"id":"3473"}},"id":"3472","type":"GlyphRenderer"},{"attributes":{"columns":[{"id":"3488"},{"id":"3489"},{"id":"3490"},{"id":"3491"},{"id":"3492"},{"id":"3493"}],"height":250,"margin":[0,10,10,10],"source":{"id":"3498"},"view":{"id":"3501"},"width":1250},"id":"3499","type":"DataTable"},{"attributes":{"coordinates":null,"data_source":{"id":"3294"},"glyph":{"id":"3475"},"group":null,"hover_glyph":null,"muted_glyph":{"id":"3477"},"nonselection_glyph":{"id":"3476"},"view":{"id":"3479"}},"id":"3478","type":"GlyphRenderer"},{"attributes":{},"id":"3540","type":"AllLabels"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"field":"x","transform":{"id":"3295"}},"hatch_alpha":{"value":0.1},"line_alpha":{"value":0.1},"line_width":{"value":2},"marker":{"value":"dash"},"size":{"value":25},"x":{"field":"x"},"y":{"field":"low"}},"id":"3482","type":"Scatter"},{"attributes":{"columns":[{"id":"3488"},{"id":"3489"},{"id":"3490"},{"id":"3491"},{"id":"3492"},{"id":"3493"}],"height":250,"margin":[0,10,10,10],"source":{"id":"3502"},"view":{"id":"3505"},"width":1250},"id":"3503","type":"DataTable"},{"attributes":{"source":{"id":"3294"}},"id":"3473","type":"CDSView"},{"attributes":{"source":{"id":"3502"}},"id":"3505","type":"CDSView"},{"attributes":{"fill_color":{"field":"x","transform":{"id":"3295"}},"line_width":{"value":2},"marker":{"value":"dash"},"size":{"value":25},"x":{"field":"x"},"y":{"field":"high"}},"id":"3475","type":"Scatter"},{"attributes":{"source":{"id":"3294"}},"id":"3485","type":"CDSView"},{"attributes":{"editor":{"id":"3509"},"field":"rmw","formatter":{"id":"3508"},"title":"RMW"},"id":"3489","type":"TableColumn"},{"attributes":{"source":{"id":"3294"}},"id":"3461","type":"CDSView"},{"attributes":{"line_alpha":{"value":0.1},"line_width":{"value":2},"x0":{"field":"x"},"x1":{"field":"x"},"y0":{"field":"box_top"},"y1":{"field":"high"}},"id":"3464","type":"Segment"},{"attributes":{},"id":"3513","type":"StringEditor"},{"attributes":{"data":{"box_bottom":{"__ndarray__":"uT5kIbRiL0CI35UbsbAvQB83yO3gwi5AYtKhE3VwL0CeABVycukvQA==","dtype":"float64","order":"little","shape":[5]},"box_top":{"__ndarray__":"jFHqGeMaMEBc+nTrxFwwQA3cQ+Nd9y9AJDMmC2ogMED/ptMkvFswQA==","dtype":"float64","order":"little","shape":[5]},"exe":["autoware_default_cbg","autoware_default_multithreaded","autoware_default_prioritized","autoware_default_singlethreaded","autoware_default_staticsinglethreaded"],"high":{"__ndarray__":"5/up8dLNL0CWQ4ts5xswQMdLN4lBYC9AJzEIrBzaL0ApXI/C9SgwQA==","dtype":"float64","order":"little","shape":[5]},"index":[2,10,18,14,6],"low":{"__ndarray__":"CKwcWmQ73z+6SQwCK4fePwisHFpkO98/EoPAyqFF3j+wcmiR7XzfPw==","dtype":"float64","order":"little","shape":[5]},"mean":{"__ndarray__":"6XCcKj3ML0AQ9Z+8jhowQJYJhmgfXS9AVRz3lKTYL0CnE++uOigwQA==","dtype":"float64","order":"little","shape":[5]},"rmw":["rmw_cyclonedds_cpp","rmw_cyclonedds_cpp","rmw_cyclonedds_cpp","rmw_cyclonedds_cpp","rmw_cyclonedds_cpp"],"std_dev":{"__ndarray__":"6IsMTkJiyj8EU0G1i43QP+5OulfPR9M/zHxSVeALyj/yq0nyusDJPw==","dtype":"float64","order":"little","shape":[5]},"type":["real","real","real","real","real"]},"selected":{"id":"3581"},"selection_policy":{"id":"3580"}},"id":"3498","type":"ColumnDataSource"},{"attributes":{"fill_alpha":{"value":0.2},"fill_color":{"field":"x","transform":{"id":"3295"}},"hatch_alpha":{"value":0.2},"line_alpha":{"value":0.2},"line_width":{"value":2},"marker":{"value":"dash"},"size":{"value":25},"x":{"field":"x"},"y":{"field":"low"}},"id":"3483","type":"Scatter"},{"attributes":{"line_alpha":{"value":0.1},"line_width":{"value":2},"x0":{"field":"x"},"x1":{"field":"x"},"y0":{"field":"box_bottom"},"y1":{"field":"low"}},"id":"3458","type":"Segment"},{"attributes":{},"id":"3510","type":"StringFormatter"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"field":"x","transform":{"id":"3295"}},"hatch_alpha":{"value":0.1},"line_alpha":{"value":0.1},"line_width":{"value":2},"marker":{"value":"dash"},"size":{"value":25},"x":{"field":"x"},"y":{"field":"high"}},"id":"3476","type":"Scatter"},{"attributes":{"callback":null,"tooltips":[["Benchmark","@{exe} [@{rmw}]"],["Average Virtual Memory Usage (MB)","@{mean}{0.00}"],["Minimum Virtual Memory Usage (MB)","@{low}{0.00}"],["Maximum Virtual Memory Usage (MB)","@{high}{0.00}"]]},"id":"3486","type":"HoverTool"},{"attributes":{"fill_color":{"field":"x","transform":{"id":"3295"}},"line_width":{"value":2},"marker":{"value":"dash"},"size":{"value":25},"x":{"field":"x"},"y":{"field":"low"}},"id":"3481","type":"Scatter"},{"attributes":{"source":{"id":"3494"}},"id":"3497","type":"CDSView"},{"attributes":{},"id":"3541","type":"UnionRenderers"},{"attributes":{"coordinates":null,"data_source":{"id":"3294"},"glyph":{"id":"3481"},"group":null,"hover_glyph":null,"muted_glyph":{"id":"3483"},"nonselection_glyph":{"id":"3482"},"view":{"id":"3485"}},"id":"3484","type":"GlyphRenderer"},{"attributes":{},"id":"3447","type":"HelpTool"},{"attributes":{},"id":"3506","type":"StringFormatter"},{"attributes":{},"id":"3516","type":"StringFormatter"},{"attributes":{},"id":"3756","type":"BasicTickFormatter"},{"attributes":{"data":{"box_bottom":{"__ndarray__":"eIfAz1I1U0Agcod5RIBcQPIoITSeqlRAaH3hbbmWUUCsYd3PCp9QQA==","dtype":"float64","order":"little","shape":[5]},"box_top":{"__ndarray__":"X9jEfB5vY0ByimvR2ClpQJ9S2KiR+GVAVu0Pym3hXkAkEljmIYNfQA==","dtype":"float64","order":"little","shape":[5]},"exe":["autoware_default_cbg","autoware_default_multithreaded","autoware_default_prioritized","autoware_default_singlethreaded","autoware_default_staticsinglethreaded"],"high":{"__ndarray__":"zczMzMxEckDNzMzMzER2QDMzMzMzq3pAZmZmZmaWY0AAAAAAAGBnQA==","dtype":"float64","order":"little","shape":[5]},"index":[1,9,17,13,5],"low":{"__ndarray__":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==","dtype":"float64","order":"little","shape":[5]},"mean":{"__ndarray__":"Gxyl5McJXUDBoReH/bRjQIxzdGHwJmBAX7X4mxM8WEDouRpbFhFYQA==","dtype":"float64","order":"little","shape":[5]},"rmw":["rmw_cyclonedds_cpp","rmw_cyclonedds_cpp","rmw_cyclonedds_cpp","rmw_cyclonedds_cpp","rmw_cyclonedds_cpp"],"std_dev":{"__ndarray__":"RinJKeqoQ0DEok8pbdNFQEt8jx2FRkdA3t9cuGiVOkDwYPUsLsg9QA==","dtype":"float64","order":"little","shape":[5]},"type":["cpu","cpu","cpu","cpu","cpu"],"x":[["rmw_cyclonedds_cpp","autoware_default_cbg"],["rmw_cyclonedds_cpp","autoware_default_multithreaded"],["rmw_cyclonedds_cpp","autoware_default_prioritized"],["rmw_cyclonedds_cpp","autoware_default_singlethreaded"],["rmw_cyclonedds_cpp","autoware_default_staticsinglethreaded"]]},"selected":{"id":"3542"},"selection_policy":{"id":"3541"}},"id":"3292","type":"ColumnDataSource"},{"attributes":{"line_alpha":{"value":0.2},"line_width":{"value":2},"x0":{"field":"x"},"x1":{"field":"x"},"y0":{"field":"box_top"},"y1":{"field":"high"}},"id":"3465","type":"Segment"},{"attributes":{"bottom":{"field":"box_bottom"},"fill_alpha":{"value":0.1},"fill_color":{"field":"x","transform":{"id":"3295"}},"hatch_alpha":{"value":0.1},"line_alpha":{"value":0.1},"top":{"field":"box_top"},"width":{"value":0.2},"x":{"field":"x"}},"id":"3470","type":"VBar"},{"attributes":{},"id":"3757","type":"AllLabels"},{"attributes":{"below":[{"id":"3307"}],"center":[{"id":"3309"},{"id":"3313"}],"height":800,"left":[{"id":"3310"}],"margin":[10,10,10,10],"renderers":[{"id":"3332"},{"id":"3338"},{"id":"3344"},{"id":"3350"},{"id":"3356"}],"sizing_mode":"scale_width","title":{"id":"3298"},"toolbar":{"id":"3321"},"width":1600,"x_range":{"id":"3296"},"x_scale":{"id":"3303"},"y_range":{"id":"3301"},"y_scale":{"id":"3305"}},"id":"3297","subtype":"Figure","type":"Plot"},{"attributes":{"source":{"id":"3498"}},"id":"3501","type":"CDSView"},{"attributes":{"editor":{"id":"3513"},"field":"mean","formatter":{"id":"3512"},"title":"Mean"},"id":"3491","type":"TableColumn"},{"attributes":{"coordinates":null,"data_source":{"id":"3294"},"glyph":{"id":"3457"},"group":null,"hover_glyph":null,"muted_glyph":{"id":"3459"},"nonselection_glyph":{"id":"3458"},"view":{"id":"3461"}},"id":"3460","type":"GlyphRenderer"},{"attributes":{"bottom_units":"screen","coordinates":null,"fill_alpha":0.5,"fill_color":"lightgrey","group":null,"left_units":"screen","level":"overlay","line_alpha":1.0,"line_color":"black","line_dash":[4,4],"line_width":2,"right_units":"screen","syncable":false,"top_units":"screen"},"id":"3448","type":"BoxAnnotation"},{"attributes":{"data":{"box_bottom":{"__ndarray__":"uT5kIbRiL0CI35UbsbAvQB83yO3gwi5AYtKhE3VwL0CeABVycukvQA==","dtype":"float64","order":"little","shape":[5]},"box_top":{"__ndarray__":"jFHqGeMaMEBc+nTrxFwwQA3cQ+Nd9y9AJDMmC2ogMED/ptMkvFswQA==","dtype":"float64","order":"little","shape":[5]},"exe":["autoware_default_cbg","autoware_default_multithreaded","autoware_default_prioritized","autoware_default_singlethreaded","autoware_default_staticsinglethreaded"],"high":{"__ndarray__":"5/up8dLNL0CWQ4ts5xswQMdLN4lBYC9AJzEIrBzaL0ApXI/C9SgwQA==","dtype":"float64","order":"little","shape":[5]},"index":[2,10,18,14,6],"low":{"__ndarray__":"CKwcWmQ73z+6SQwCK4fePwisHFpkO98/EoPAyqFF3j+wcmiR7XzfPw==","dtype":"float64","order":"little","shape":[5]},"mean":{"__ndarray__":"6XCcKj3ML0AQ9Z+8jhowQJYJhmgfXS9AVRz3lKTYL0CnE++uOigwQA==","dtype":"float64","order":"little","shape":[5]},"rmw":["rmw_cyclonedds_cpp","rmw_cyclonedds_cpp","rmw_cyclonedds_cpp","rmw_cyclonedds_cpp","rmw_cyclonedds_cpp"],"std_dev":{"__ndarray__":"6IsMTkJiyj8EU0G1i43QP+5OulfPR9M/zHxSVeALyj/yq0nyusDJPw==","dtype":"float64","order":"little","shape":[5]},"type":["real","real","real","real","real"],"x":[["rmw_cyclonedds_cpp","autoware_default_cbg"],["rmw_cyclonedds_cpp","autoware_default_multithreaded"],["rmw_cyclonedds_cpp","autoware_default_prioritized"],["rmw_cyclonedds_cpp","autoware_default_singlethreaded"],["rmw_cyclonedds_cpp","autoware_default_staticsinglethreaded"]]},"selected":{"id":"3628"},"selection_policy":{"id":"3627"}},"id":"3293","type":"ColumnDataSource"},{"attributes":{},"id":"3759","type":"CategoricalTickFormatter"},{"attributes":{"editor":{"id":"3517"},"field":"std_dev","formatter":{"id":"3516"},"title":"Std. Dev."},"id":"3493","type":"TableColumn"},{"attributes":{},"id":"3536","type":"BasicTickFormatter"},{"attributes":{},"id":"3760","type":"AllLabels"},{"attributes":{},"id":"3539","type":"CategoricalTickFormatter"},{"attributes":{"line_width":{"value":2},"x0":{"field":"x"},"x1":{"field":"x"},"y0":{"field":"box_top"},"y1":{"field":"high"}},"id":"3463","type":"Segment"},{"attributes":{"data":{"box_bottom":{"__ndarray__":"0LxZhwTfj0B5fimBilKLQBCBxKW3pY9AwYpBUwjWhEAZYQ5MideEQA==","dtype":"float64","order":"little","shape":[5]},"box_top":{"__ndarray__":"qL32Hy5rkECfZmQlJ16MQFLeK24+hZBAjQyhi8FjhUBn7SJnqGGFQA==","dtype":"float64","order":"little","shape":[5]},"exe":["autoware_default_cbg","autoware_default_multithreaded","autoware_default_prioritized","autoware_default_singlethreaded","autoware_default_staticsinglethreaded"],"high":{"__ndarray__":"+FPjpZsukEAtsp3vp9yLQHnpJjGILpBApHA9CtcdhUAv3SQGgR2FQA==","dtype":"float64","order":"little","shape":[5]},"index":[3,11,19,15,7],"low":{"__ndarray__":"qvHSTWIQAECq8dJNYhAAQKrx0k1iEABAqvHSTWIQAECq8dJNYhAAQA==","dtype":"float64","order":"little","shape":[5]},"mean":{"__ndarray__":"CM7RMVgtkECM8kbTWNiLQG0PhyANLJBAp0tx7+QchUBAp5jZmByFQA==","dtype":"float64","order":"little","shape":[5]},"rmw":["rmw_cyclonedds_cpp","rmw_cyclonedds_cpp","rmw_cyclonedds_cpp","rmw_cyclonedds_cpp","rmw_cyclonedds_cpp"],"std_dev":{"__ndarray__":"8c93EvfqLkBZgq5DyrkwQE+5M2lTTDZAljnwCye3IUC1iZFi40MhQA==","dtype":"float64","order":"little","shape":[5]},"type":["virtual","virtual","virtual","virtual","virtual"]},"selected":{"id":"3691"},"selection_policy":{"id":"3690"}},"id":"3502","type":"ColumnDataSource"}],"root_ids":["3495","3297","3499","3361","3503","3425"]},"title":"Bokeh Application","version":"2.4.3"}}';
+        const render_items = [{"docid":"8e69844f-1628-4763-b540-9aa871d52821","root_ids":["3495","3297","3499","3361","3503","3425"],"roots":{"3297":"98265941-5fee-494c-9ec8-1e4e87094d06","3361":"50e8d8c3-b75b-4f9f-a141-16008e063cff","3425":"cac73398-4568-4938-a379-d39a5e7dbe1b","3495":"5c7101c0-92c7-41ca-95c8-0ae4feadab08","3499":"3de1ecd4-24f5-4b9a-8101-95b2755c2980","3503":"f2164777-afd8-463c-9b53-99257c217588"}}];
+        root.Bokeh.embed.embed_items(docs_json, render_items);
+        }
+        if (root.Bokeh !== undefined) {
+          embed_document(root);
+        } else {
+          let attempts = 0;
+          const timer = setInterval(function(root) {
+            if (root.Bokeh !== undefined) {
+              clearInterval(timer);
+              embed_document(root);
+            } else {
+              attempts++;
+              if (attempts > 100) {
+                clearInterval(timer);
+                console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+              }
+            }
+          }, 10, root)
+        }
+      })(window);
+    });
+  };
+  if (document.readyState != "loading") fn();
+  else document.addEventListener("DOMContentLoaded", fn);
+})();
+</script>
+
+<div class="bk-root" id="5c7101c0-92c7-41ca-95c8-0ae4feadab08" data-root-id="3495"></div>
+<div class="bk-root" id="98265941-5fee-494c-9ec8-1e4e87094d06" data-root-id="3297"></div>
+
+<div class="bk-root" id="3de1ecd4-24f5-4b9a-8101-95b2755c2980" data-root-id="3499"></div>
+<div class="bk-root" id="50e8d8c3-b75b-4f9f-a141-16008e063cff" data-root-id="3361"></div>
+
+<div class="bk-root" id="f2164777-afd8-463c-9b53-99257c217588" data-root-id="3503"></div>
+<div class="bk-root" id="cac73398-4568-4938-a379-d39a5e7dbe1b" data-root-id="3425"></div>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="executor_kpi_summary_report_120s.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Key performance indicator report" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Key performance indicator report
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.indexes", "navigation.tracking"], "search": "../../../../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+    
+  </body>
+</html>
